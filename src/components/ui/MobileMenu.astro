@@ -1,0 +1,37 @@
+---
+// src/components/ui/MobileMenu.astro
+---
+
+<button id="menu-btn" class="md:hidden p-2">
+  <iconify-icon icon="mdi:menu" class="text-2xl text-dark"></iconify-icon>
+</button>
+
+<div id="mobile-menu"
+     class="hidden fixed inset-0 bg-white z-50 pt-20 px-6 overflow-y-auto">
+  <button id="close-btn" class="absolute top-6 right-6">
+    <iconify-icon icon="mdi:close" class="text-3xl text-dark"></iconify-icon>
+  </button>
+
+  <nav class="space-y-6 text-lg font-medium">
+    <a href="/" class="block text-dark hover:text-primary">Home</a>
+    <a href="/domeinnamen" class="block text-dark hover:text-primary">Domeinnamen</a>
+    <a href="/webhosting" class="block text-dark hover:text-primary">Webhosting</a>
+    <a href="/webhosting-pro" class="block text-dark hover:text-primary">Pro</a>
+    <a href="/vps" class="block text-dark hover:text-primary">VPS</a>
+    <a href="/klantenservice" class="block text-dark hover:text-primary">Support</a>
+    <a href="https://account.gethost.nl"
+       target="_blank"
+       class="block bg-primary text-white text-center py-3 rounded-lg hover:bg-primary-dark transition">
+      Account
+    </a>
+  </nav>
+</div>
+
+<script>
+  const menuBtn = document.getElementById('menu-btn');
+  const mobileMenu = document.getElementById('mobile-menu');
+  const closeBtn = document.getElementById('close-btn');
+
+  menuBtn?.addEventListener('click', () => mobileMenu?.classList.remove('hidden'));
+  closeBtn?.addEventListener('click', () => mobileMenu?.classList.add('hidden'));
+</script>

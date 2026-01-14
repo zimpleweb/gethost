@@ -1,0 +1,88 @@
+---
+// src/components/HomeHero.astro
+--- 
+
+<!-- Hero section for the homepage: dark background with value proposition and service overview -->
+<section class="py-16 bg-[#0f0f0f] text-white">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="grid lg:grid-cols-2 gap-12 items-center">
+      <!-- Left column: main messaging and benefits -->
+      <div>
+        <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
+          Alles-in-één oplossing<br>
+          <span class="text-primary">voor jouw website</span>
+        </h1>
+        <p class="text-lg md:text-xl text-gray-300 mb-8">
+          Ervaar onze snelle, veilige webhosting met meer dan 20 jaar ervaring. 
+          Alles is inbegrepen: e-mail, SSL, back-ups, installatiehulp en persoonlijke Nederlandse support.
+        </p>
+        <ul class="space-y-4 text-lg mb-10">
+          <li class="flex items-center gap-3">
+            <iconify-icon icon="mdi:check-circle" class="text-green-500 text-2xl flex-shrink-0"></iconify-icon>
+            <span>Gratis domeinnaam t.w.v. €14,99</span>
+          </li>
+          <li class="flex items-center gap-3">
+            <iconify-icon icon="mdi:check-circle" class="text-green-500 text-2xl flex-shrink-0"></iconify-icon>
+            <span>Gratis SSL-certificaat (Let's Encrypt)</span>
+          </li>
+          <li class="flex items-center gap-3">
+            <iconify-icon icon="mdi:check-circle" class="text-green-500 text-2xl flex-shrink-0"></iconify-icon>
+            <span>Gratis verhuisservice t.w.v. €185,-</span>
+          </li>
+          <li class="flex items-center gap-3">
+            <iconify-icon icon="mdi:check-circle" class="text-green-500 text-2xl flex-shrink-0"></iconify-icon>
+            <span>LiteSpeed Enterprise + NVMe SSD</span>
+          </li>
+        </ul>
+        <div class="flex flex-col sm:flex-row gap-4">
+          <a href="#pakketten" class="bg-primary text-white hover:bg-primary-dark px-8 py-4 rounded-lg font-semibold text-lg transition shadow-lg text-center">
+            Bekijk onze pakketten →
+          </a>
+          <a href="/klantenservice" class="bg-white text-primary hover:bg-gray-100 px-8 py-4 rounded-lg font-semibold text-lg transition shadow-lg text-center">
+            Gratis verhuizing aanvragen
+          </a>
+        </div>
+      </div>
+
+      <!-- Right column: service overview cards (replaces old Stats component) -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+        <div class="flex items-start gap-4 bg-white/10 backdrop-blur rounded-xl p-5 border border-white/20">
+          <div class="w-12 h-12 bg-primary/20 rounded-lg flex items-center justify-center">
+            <iconify-icon icon="mdi:earth" class="text-2xl text-primary"></iconify-icon>
+          </div>
+          <div>
+            <h3 class="font-semibold text-white">Domeinnamen</h3>
+            <p class="text-sm text-gray-300 mt-1">Vanaf €9,99 per jaar met gratis DNS-beheer.</p>
+          </div>
+        </div>
+        <div class="flex items-start gap-4 bg-white/10 backdrop-blur rounded-xl p-5 border border-white/20">
+          <div class="w-12 h-12 bg-primary/20 rounded-lg flex items-center justify-center">
+            <iconify-icon icon="mdi:web" class="text-2xl text-primary"></iconify-icon>
+          </div>
+          <div>
+            <h3 class="font-semibold text-white">Webhosting</h3>
+            <p class="text-sm text-gray-300 mt-1">Shared hosting met cPanel & 99.9% uptime.</p>
+          </div>
+        </div>
+        <div class="flex items-start gap-4 bg-white/10 backdrop-blur rounded-xl p-5 border border-white/20">
+          <div class="w-12 h-12 bg-primary/20 rounded-lg flex items-center justify-center">
+            <iconify-icon icon="mdi:rocket" class="text-2xl text-primary"></iconify-icon>
+          </div>
+          <div>
+            <h3 class="font-semibold text-white">Webhosting Pro</h3>
+            <p class="text-sm text-gray-300 mt-1">Meer snelheid voor groeiende websites.</p>
+          </div>
+        </div>
+        <div class="flex items-start gap-4 bg-white/10 backdrop-blur rounded-xl p-5 border border-white/20">
+          <div class="w-12 h-12 bg-primary/20 rounded-lg flex items-center justify-center">
+            <iconify-icon icon="mdi:server-network" class="text-2xl text-primary"></iconify-icon>
+          </div>
+          <div>
+            <h3 class="font-semibold text-white">VPS</h3>
+            <p class="text-sm text-gray-300 mt-1">Volledige controle met root-toegang.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

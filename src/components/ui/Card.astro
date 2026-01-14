@@ -1,0 +1,27 @@
+---
+// src/components/ui/Card.astro
+const { title, description, icon, link } = Astro.props;
+---
+
+<a
+  href={link}
+  class="group flex flex-col h-full bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 p-6 text-center"
+>
+  <!-- Icon -->
+  <div class="w-16 h-16 mx-auto mb-4 bg-gradient-to-br from-primary/20 to-primary/10 rounded-2xl flex items-center justify-center group-hover:from-primary/30 group-hover:to-primary/20 transition">
+    <iconify-icon icon={icon} class="text-3xl text-primary"></iconify-icon>
+  </div>
+
+  <!-- Titel -->
+  <h3 class="text-xl font-bold text-dark mb-3">{title}</h3>
+
+  <!-- Beschrijving: altijd 3 regels -->
+  <p class="text-sm text-gray flex-1 leading-tight line-clamp-3">
+    {description}
+  </p>
+
+  <!-- Link: altijd onderaan -->
+  <span class="mt-4 text-primary font-medium group-hover:underline">
+    Bekijk mogelijkheden
+  </span>
+</a>

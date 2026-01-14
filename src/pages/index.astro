@@ -1,0 +1,28 @@
+---
+// src/pages/index.astro
+import BaseLayout from '../components/layout/BaseLayout.astro';
+import Header from '../components/layout/Header.astro';
+import Footer from '../components/layout/Footer.astro';
+import HomeHero from '../components/HomeHero.astro';
+
+import Pakketten from '../components/Pakketten.astro';
+import Reviews from '../components/Reviews.astro';
+import WhyGetHost from '../components/WhyGetHost.astro';
+import SupportCTA from '../components/SupportCTA.astro';
+import FAQAccordion from '../components/FAQAccordion.astro';
+---
+
+<BaseLayout title="GetHost - Betrouwbare Webhosting & Domeinnamen">
+  <Header slot="header" />
+
+  <!-- Homepage hero with service overview -->
+  <HomeHero />
+
+  <Pakketten />
+  <Reviews />
+  <WhyGetHost />
+  <SupportCTA />
+  <FAQAccordion />
+
+  <Footer slot="footer" />
+</BaseLayout>

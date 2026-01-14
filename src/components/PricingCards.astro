@@ -1,0 +1,318 @@
+---
+// src/components/PricingCards.astro
+---
+
+<section id="pakketten" class="py-20 bg-white">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <h2 class="text-3xl md:text-4xl font-bold text-center mb-4 text-dark">
+      Kies jouw perfecte pakket
+    </h2>
+    <p class="text-center text-gray mb-12 max-w-2xl mx-auto">
+      Alle pakketten met 99.9% uptime, SSD-opslag en 24/7 support.
+    </p>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+
+      <!-- GetLite -->
+      <div class="relative bg-white rounded-2xl shadow-lg p-6 hover:shadow-xl transition-all duration-300 flex flex-col">
+        <div class="text-center mb-6">
+          <h3 class="text-xl font-bold text-dark mt-4">GetLite</h3>
+          <p class="text-sm text-gray mt-1">Voor starters</p>
+        </div>
+        <div class="text-center mb-6">
+          <div class="flex items-center justify-center gap-1">
+            <span class="text-4xl font-bold text-primary">€20</span>
+            <span class="text-gray self-end">/jaar</span>
+          </div>
+          <p class="text-xs text-gray mt-1">Incl. BTW</p>
+        </div>
+
+        <ul class="space-y-3 text-sm mb-1 flex-1">
+          <li class="flex items-center gap-2">
+            <iconify-icon icon="mdi:check-circle" class="text-green-600 text-lg"></iconify-icon>
+            <span>2 GB webruimte</span>
+          </li>
+          <li class="flex items-center gap-2">
+            <iconify-icon icon="mdi:check-circle" class="text-green-600 text-lg"></iconify-icon>
+            <span>FUP(2) dataverkeer</span>
+          </li>
+          <li class="flex items-center gap-2">
+            <iconify-icon icon="mdi:check-circle" class="text-green-600 text-lg"></iconify-icon>
+            <span>SSD Powered</span>
+          </li>
+          <li class="flex items-center gap-2">
+            <iconify-icon icon="mdi:check-circle" class="text-green-600 text-lg"></iconify-icon>
+            <span>PHP 7/8</span>
+          </li>
+          <li class="flex items-center gap-2">
+            <iconify-icon icon="mdi:check-circle" class="text-green-600 text-lg"></iconify-icon>
+            <span>SSH</span>
+          </li>
+          <li class="flex items-center gap-2">
+            <iconify-icon icon="mdi:check-circle" class="text-green-600 text-lg"></iconify-icon>
+            <span>Litespeed Enterprise</span>
+          </li>
+          <li class="flex items-center gap-2">
+            <iconify-icon icon="mdi:check-circle" class="text-green-600 text-lg"></iconify-icon>
+            <span>SSL inbegrepen</span>
+          </li>
+        </ul>
+
+        <div class="details-panel overflow-hidden transition-all duration-500" style="max-height: 0;">
+          <div class="border-t pt-4 text-sm text-gray space-y-2">
+            <p><strong>Webruimte:</strong> 2 GB NVMe SSD</p>
+            <p><strong>Dataverkeer:</strong> FUP(2) – Fair Use Policy</p>
+            <p><strong>E-mail:</strong> 999 e-mailadressen</p>
+            <p><strong>Database:</strong> MariaDB</p>
+            <p><strong>Toegang:</strong> FTP account, SSH</p>
+            <p><strong>Webmail:</strong> Inbegrepen (Roundcube)</p>
+            <p><strong>Techniek:</strong> PHP 7.4–8.3, Litespeed Enterprise</p>
+            <p><strong>Beveiliging:</strong> Gratis Let's Encrypt SSL</p>
+          </div>
+        </div>
+
+        <div class="mt-6 space-y-3">
+          <button class="toggle-details w-full text-center text-primary font-medium hover:underline focus:outline-none">
+            Meer informatie
+          </button>
+          <a href="https://account.gethost.nl" target="_blank" class="w-full bg-primary text-white hover:bg-primary-dark py-3 rounded-lg font-medium text-center block transition">
+            Bestellen
+          </a>
+        </div>
+      </div>
+
+      <!-- GetMiddle -->
+      <div class="relative bg-white rounded-2xl shadow-lg p-6 hover:shadow-xl transition-all duration-300 flex flex-col">
+        <div class="text-center mb-6">
+          <h3 class="text-xl font-bold text-dark mt-4">GetMiddle</h3>
+          <p class="text-sm text-gray mt-1">Voor blogs & shops</p>
+        </div>
+        <div class="text-center mb-6">
+          <div class="flex items-center justify-center gap-1">
+            <span class="text-4xl font-bold text-primary">€30</span>
+            <span class="text-gray self-end">/jaar</span>
+          </div>
+          <p class="text-xs text-gray mt-1">Incl. BTW</p>
+        </div>
+
+        <ul class="space-y-3 text-sm mb-1 flex-1">
+          <li class="flex items-center gap-2">
+            <iconify-icon icon="mdi:check-circle" class="text-green-600 text-lg"></iconify-icon>
+            <span>5 GB webruimte</span>
+          </li>
+          <li class="flex items-center gap-2">
+            <iconify-icon icon="mdi:check-circle" class="text-green-600 text-lg"></iconify-icon>
+            <span>FUP(2) dataverkeer</span>
+          </li>
+          <li class="flex items-center gap-2">
+            <iconify-icon icon="mdi:check-circle" class="text-green-600 text-lg"></iconify-icon>
+            <span>SSD Powered</span>
+          </li>
+          <li class="flex items-center gap-2">
+            <iconify-icon icon="mdi:check-circle" class="text-green-600 text-lg"></iconify-icon>
+            <span>PHP 7/8</span>
+          </li>
+          <li class="flex items-center gap-2">
+            <iconify-icon icon="mdi:check-circle" class="text-green-600 text-lg"></iconify-icon>
+            <span>SSH</span>
+          </li>
+          <li class="flex items-center gap-2">
+            <iconify-icon icon="mdi:check-circle" class="text-green-600 text-lg"></iconify-icon>
+            <span>Litespeed Enterprise</span>
+          </li>
+          <li class="flex items-center gap-2">
+            <iconify-icon icon="mdi:check-circle" class="text-green-600 text-lg"></iconify-icon>
+            <span>SSL inbegrepen</span>
+          </li>
+        </ul>
+
+        <div class="details-panel overflow-hidden transition-all duration-500" style="max-height: 0;">
+          <div class="border-t pt-4 text-sm text-gray space-y-2">
+            <p><strong>Webruimte:</strong> 5 GB NVMe SSD</p>
+            <p><strong>Dataverkeer:</strong> FUP(2) – Fair Use Policy</p>
+            <p><strong>E-mail:</strong> 999 e-mailadressen</p>
+            <p><strong>Database:</strong> MariaDB</p>
+            <p><strong>Toegang:</strong> FTP account, SSH</p>
+            <p><strong>Webmail:</strong> Inbegrepen (Roundcube)</p>
+            <p><strong>Prestaties:</strong> 2x CPU/RAM, Litespeed caching</p>
+            <p><strong>Extra:</strong> Gratis verhuisservice</p>
+          </div>
+        </div>
+
+        <div class="mt-6 space-y-3">
+          <button class="toggle-details w-full text-center text-primary font-medium hover:underline focus:outline-none">
+            Meer informatie
+          </button>
+          <a href="https://account.gethost.nl" target="_blank" class="w-full bg-primary text-white hover:bg-primary-dark py-3 rounded-lg font-medium text-center block transition">
+            Bestellen
+          </a>
+        </div>
+      </div>
+
+      <!-- GetLarge -->
+      <div class="relative bg-white rounded-2xl shadow-lg p-6 hover:shadow-xl transition-all duration-300 flex flex-col">
+        <div class="text-center mb-6">
+          <h3 class="text-xl font-bold text-dark mt-4">GetLarge</h3>
+          <p class="text-sm text-gray mt-1">Voor groeiende sites</p>
+        </div>
+        <div class="text-center mb-6">
+          <div class="flex items-center justify-center gap-1">
+            <span class="text-4xl font-bold text-primary">€50</span>
+            <span class="text-gray self-end">/jaar</span>
+          </div>
+          <p class="text-xs text-gray mt-1">Incl. BTW</p>
+        </div>
+
+        <ul class="space-y-3 text-sm mb-1 flex-1">
+          <li class="flex items-center gap-2">
+            <iconify-icon icon="mdi:check-circle" class="text-green-600 text-lg"></iconify-icon>
+            <span>10 GB webruimte</span>
+          </li>
+          <li class="flex items-center gap-2">
+            <iconify-icon icon="mdi:check-circle" class="text-green-600 text-lg"></iconify-icon>
+            <span>FUP(2) dataverkeer</span>
+          </li>
+          <li class="flex items-center gap-2">
+            <iconify-icon icon="mdi:check-circle" class="text-green-600 text-lg"></iconify-icon>
+            <span>SSD Powered</span>
+          </li>
+          <li class="flex items-center gap-2">
+            <iconify-icon icon="mdi:check-circle" class="text-green-600 text-lg"></iconify-icon>
+            <span>PHP 7/8</span>
+          </li>
+          <li class="flex items-center gap-2">
+            <iconify-icon icon="mdi:check-circle" class="text-green-600 text-lg"></iconify-icon>
+            <span>SSH</span>
+          </li>
+          <li class="flex items-center gap-2">
+            <iconify-icon icon="mdi:check-circle" class="text-green-600 text-lg"></iconify-icon>
+            <span>Litespeed Enterprise</span>
+          </li>
+          <li class="flex items-center gap-2">
+            <iconify-icon icon="mdi:check-circle" class="text-green-600 text-lg"></iconify-icon>
+            <span>SSL inbegrepen</span>
+          </li>
+        </ul>
+
+        <div class="details-panel overflow-hidden transition-all duration-500" style="max-height: 0;">
+          <div class="border-t pt-4 text-sm text-gray space-y-2">
+            <p><strong>Webruimte:</strong> 10 GB NVMe SSD</p>
+            <p><strong>Dataverkeer:</strong> FUP(2) – Fair Use Policy</p>
+            <p><strong>E-mail:</strong> 999 e-mailadressen</p>
+            <p><strong>Database:</strong> MariaDB</p>
+            <p><strong>Toegang:</strong> FTP account, SSH</p>
+            <p><strong>Webmail:</strong> Inbegrepen (Roundcube)</p>
+            <p><strong>Prestaties:</strong> 4x CPU/RAM, priority traffic</p>
+            <p><strong>Extra:</strong> Dagelijkse backups, staging</p>
+          </div>
+        </div>
+
+        <div class="mt-6 space-y-3">
+          <button class="toggle-details w-full text-center text-primary font-medium hover:underline focus:outline-none">
+            Meer informatie
+          </button>
+          <a href="https://account.gethost.nl" target="_blank" class="w-full bg-primary text-white hover:bg-primary-dark py-3 rounded-lg font-medium text-center block transition">
+            Bestellen
+          </a>
+        </div>
+      </div>
+
+      <!-- GetPro -->
+      <div class="relative bg-white rounded-2xl shadow-lg p-6 hover:shadow-xl transition-all duration-300 flex flex-col">
+        <div class="text-center mb-6">
+          <h3 class="text-xl font-bold text-dark mt-4">GetPro</h3>
+          <p class="text-sm text-gray mt-1">Voor professionals</p>
+        </div>
+        <div class="text-center mb-6">
+          <div class="flex items-center justify-center gap-1">
+            <span class="text-4xl font-bold text-primary">€75</span>
+            <span class="text-gray self-end">/jaar</span>
+          </div>
+          <p class="text-xs text-gray mt-1">Incl. BTW</p>
+        </div>
+
+        <ul class="space-y-3 text-sm mb-1 flex-1">
+          <li class="flex items-center gap-2">
+            <iconify-icon icon="mdi:check-circle" class="text-green-600 text-lg"></iconify-icon>
+            <span>15 GB webruimte</span>
+          </li>
+          <li class="flex items-center gap-2">
+            <iconify-icon icon="mdi:check-circle" class="text-green-600 text-lg"></iconify-icon>
+            <span>FUP(2) dataverkeer</span>
+          </li>
+          <li class="flex items-center gap-2">
+            <iconify-icon icon="mdi:check-circle" class="text-green-600 text-lg"></iconify-icon>
+            <span>SSD Powered</span>
+          </li>
+          <li class="flex items-center gap-2">
+            <iconify-icon icon="mdi:check-circle" class="text-green-600 text-lg"></iconify-icon>
+            <span>PHP 7/8</span>
+          </li>
+          <li class="flex items-center gap-2">
+            <iconify-icon icon="mdi:check-circle" class="text-green-600 text-lg"></iconify-icon>
+            <span>SSH</span>
+          </li>
+          <li class="flex items-center gap-2">
+            <iconify-icon icon="mdi:check-circle" class="text-green-600 text-lg"></iconify-icon>
+            <span>Litespeed Enterprise</span>
+          </li>
+          <li class="flex items-center gap-2">
+            <iconify-icon icon="mdi:check-circle" class="text-green-600 text-lg"></iconify-icon>
+            <span>SSL inbegrepen</span>
+          </li>
+        </ul>
+
+        <div class="details-panel overflow-hidden transition-all duration-500" style="max-height: 0;">
+          <div class="border-t pt-4 text-sm text-gray space-y-2">
+            <p><strong>Webruimte:</strong> 15 GB NVMe SSD</p>
+            <p><strong>Dataverkeer:</strong> FUP(2) – Fair Use Policy</p>
+            <p><strong>E-mail:</strong> 999 e-mailadressen</p>
+            <p><strong>Database:</strong> MariaDB</p>
+            <p><strong>Toegang:</strong> FTP account, SSH</p>
+            <p><strong>Webmail:</strong> Inbegrepen (Roundcube)</p>
+            <p><strong>Prestaties:</strong> 6x CPU/RAM, dedicated IP</p>
+            <p><strong>Extra:</strong> Priority support, gratis CDN</p>
+          </div>
+        </div>
+
+        <div class="mt-6 space-y-3">
+          <button class="toggle-details w-full text-center text-primary font-medium hover:underline focus:outline-none">
+            Meer informatie
+          </button>
+          <a href="https://account.gethost.nl" target="_blank" class="w-full bg-primary text-white hover:bg-primary-dark py-3 rounded-lg font-medium text-center block transition">
+            Bestellen
+          </a>
+        </div>
+      </div>
+
+    </div>
+
+    <p class="text-center mt-10 text-xs text-gray">
+      FUP(2) = Fair Use Policy • Alle prijzen incl. BTW • 30 dagen niet goed, geld terug
+    </p>
+  </div>
+</section>
+
+<script>
+  // === GLOBALE TOGGLE: ÉÉN KLIK = ALLE PANEELEN OPEN/SLUIT ===
+  document.querySelectorAll('.toggle-details').forEach(button => {
+    button.addEventListener('click', () => {
+      const allPanels = document.querySelectorAll('.details-panel');
+      const allButtons = document.querySelectorAll('.toggle-details');
+
+      const isAnyOpen = Array.from(allPanels).some(panel => 
+        panel.style.maxHeight && panel.style.maxHeight !== '0px'
+      );
+
+      allPanels.forEach((panel, index) => {
+        if (isAnyOpen) {
+          panel.style.maxHeight = '0';
+          allButtons[index].textContent = 'Meer informatie';
+        } else {
+          panel.style.maxHeight = panel.scrollHeight + 'px';
+          allButtons[index].textContent = 'Minder informatie';
+        }
+      });
+    });
+  });
+</script>

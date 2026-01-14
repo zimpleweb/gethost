@@ -1,0 +1,65 @@
+---
+// src/components/layout/BaseLayout.astro
+export interface Props {
+  title: string;
+  description?: string;
+}
+
+const { 
+  title = 'GetHost', 
+  description = 'Betrouwbare webhosting en domeinnamen sinds 2004' 
+} = Astro.props;
+
+import '@/styles/global.css';
+
+// CORRECTE IMPORT VOOR COMPONENTEN
+import WhatsAppFloat from './WhatsAppFloat.astro';
+---
+
+<!DOCTYPE html>
+<html lang="nl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content={description} />
+    <title>{title} | GetHost</title>
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Iconify -->
+    <script is:inline src="https://cdn.jsdelivr.net/npm/iconify-icon@1.0.8/dist/iconify-icon.min.js"></script>
+
+    <!-- Alpine.js -->
+    <script type="module">
+      import Alpine from 'https://unpkg.com/alpinejs@3.x.x/dist/module.esm.js';
+      window.Alpine = Alpine;
+      Alpine.start();
+    </script>
+  </head>
+
+  <body class="font-sans text-dark bg-secondary antialiased">
+    <slot name="header" />
+    <slot />
+    <slot name="footer" />
+
+    <!-- WhatsApp floating knop – nu correct geïmporteerd -->
+    <WhatsAppFloat />
+
+    <!-- Scripts -->
+    <script type="module" hoist src="/src/scripts/main.js"></script>
+  </body>
+</html>
+
+<style is:global>
+  :root {
+    --primary: #ff6200;
+    --primary-dark: #e55a00;
+    --dark: #0f0f0f;
+    --gray: #6b7280;
+  }
+  body { font-family: 'Inter', sans-serif; }
+</style>

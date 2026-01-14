@@ -1,0 +1,84 @@
+---
+// src/components/Stats.astro
+---
+
+<!-- STATS – LINKS TEKST, RECHTS 2x2 MET DIENSTEN (TESTCONTENT) -->
+<section class="py-20 bg-gray-50">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="grid lg:grid-cols-2 gap-12 items-center">
+
+      <!-- LINKS: TEKSTBLOK -->
+      <div class="space-y-6">
+        <p class="text-sm text-primary font-medium uppercase tracking-wider">
+          SNELLE & BETROUWBARE HOSTING
+        </p>
+        <h2 class="text-4xl md:text-5xl font-bold text-dark">
+          Jouw website in goede handen<br />bij de beste hoster
+        </h2>
+        <p class="text-lg text-gray-700 leading-relaxed">
+          Op zoek naar snelle, veilige en betaalbare hosting? Bij GetHost krijg je premium prestaties, 24/7 support en een gratis verhuisservice. Geen gedoe, geen downtime – wij regelen alles.
+        </p>
+        <div class="bg-white border border-gray-300 rounded-xl p-4 inline-flex items-center gap-3 shadow-sm">
+          <iconify-icon icon="mdi:truck-fast" class="text-2xl text-primary"></iconify-icon>
+          <span class="text-sm font-medium">Gratis verhuizing met onze SiteSwitch service.</span>
+        </div>
+        <p class="text-gray-700">
+          Of je nu een blog, webshop of bedrijfswebsite hebt: wij zorgen dat alles soepel draait. GetHost – jouw partner voor succes online.
+        </p>
+        <a href="#stappenplan" class="inline-block bg-primary text-white px-8 py-3 rounded-lg font-medium hover:bg-primary-dark transition shadow-md">
+          Bekijk het stappenplan
+        </a>
+      </div>
+
+      <!-- RECHTS: 2x2 GRID MET DIENSTEN -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+        
+        <!-- Domeinnamen -->
+        <div class="flex items-start gap-4 bg-white p-5 rounded-xl shadow-sm border border-gray-200">
+          <div class="flex-shrink-0 w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center">
+            <iconify-icon icon="mdi:earth" class="text-2xl text-primary"></iconify-icon>
+          </div>
+          <div>
+            <h3 class="font-semibold text-dark">Domeinnamen</h3>
+            <p class="text-sm text-gray-600 mt-1">Registreer .nl, .com of .eu vanaf €9,99 per jaar met gratis DNS-beheer.</p>
+          </div>
+        </div>
+
+        <!-- Webhosting -->
+        <div class="flex items-start gap-4 bg-white p-5 rounded-xl shadow-sm border border-gray-200">
+          <div class="flex-shrink-0 w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center">
+            <iconify-icon icon="mdi:web" class="text-2xl text-primary"></iconify-icon>
+          </div>
+          <div>
+            <h3 class="font-semibold text-dark">Webhosting</h3>
+            <p class="text-sm text-gray-600 mt-1">Shared hosting met cPanel, 1-click installs en 99.9% uptime garantie.</p>
+          </div>
+        </div>
+
+        <!-- Webhosting Pro -->
+        <div class="flex items-start gap-4 bg-white p-5 rounded-xl shadow-sm border border-gray-200">
+          <div class="flex-shrink-0 w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center">
+            <iconify-icon icon="mdi:rocket" class="text-2xl text-primary"></iconify-icon>
+          </div>
+          <div>
+            <h3 class="font-semibold text-dark">Webhosting Pro</h3>
+            <p class="text-sm text-gray-600 mt-1">Meer snelheid en resources voor groeiende websites en webshops.</p>
+          </div>
+        </div>
+
+        <!-- VPS -->
+        <div class="flex items-start gap-4 bg-white p-5 rounded-xl shadow-sm border border-gray-200">
+          <div class="flex-shrink-0 w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center">
+            <iconify-icon icon="mdi:server-network" class="text-2xl text-primary"></iconify-icon>
+          </div>
+          <div>
+            <h3 class="font-semibold text-dark">VPS</h3>
+            <p class="text-sm text-gray-600 mt-1">Volledige controle met root-toegang, schaalbare resources en SSD-opslag.</p  >
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+</section>

@@ -1,0 +1,68 @@
+---
+// src/components/SupportCTA.astro
+---
+
+<section class="py-20 bg-gradient-to-br from-primary/10 via-primary/5 to-white">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+      <!-- Tekst + knoppen -->
+      <div class="space-y-6">
+        <h2 class="text-3xl md:text-4xl font-bold text-dark">
+          Waar kunnen we je mee helpen?
+        </h2>
+        <p class="text-gray-700 text-lg">
+          Heb je last van keuzestress of kom je ergens niet uit? Geen probleem. Wij staan 7 dagen per week voor je klaar om al je vragen te beantwoorden. Zowel via e-mail als via onze LiveChat.
+        </p>
+
+        <div class="flex flex-wrap gap-4">
+          <!-- Bellen -->
+          <a
+            href="tel:+31850000000"
+            class="flex items-center gap-3 bg-white border border-primary/20 hover:bg-primary/5 px-5 py-3 rounded-lg transition shadow-sm"
+          >
+            <iconify-icon icon="mdi:phone" class="text-2xl text-primary"></iconify-icon>
+            <span class="font-medium text-dark">Bellen</span>
+          </a>
+
+          <!-- WhatsApp -->
+          <a
+            href="https://wa.me/31612345678"
+            target="_blank"
+            class="flex items-center gap-3 bg-white border border-primary/20 hover:bg-primary/5 px-5 py-3 rounded-lg transition shadow-sm"
+          >
+            <iconify-icon icon="mdi:whatsapp" class="text-2xl text-primary"></iconify-icon>
+            <span class="font-medium text-dark">WhatsApp</span>
+          </a>
+
+          <!-- E-mail -->
+          <a
+            href="mailto:support@gethost.nl"
+            class="flex items-center gap-3 bg-white border border-primary/20 hover:bg-primary/5 px-5 py-3 rounded-lg transition shadow-sm"
+          >
+            <iconify-icon icon="mdi:email" class="text-2xl text-primary"></iconify-icon>
+            <span class="font-medium text-dark">Mail</span>
+          </a>
+
+          <!-- Telegram -->
+          <a
+            href="https://t.me/GetHostSupport"
+            target="_blank"
+            class="flex items-center gap-3 bg-white border border-primary/20 hover:bg-primary/5 px-5 py-3 rounded-lg transition shadow-sm"
+          >
+            <iconify-icon icon="mdi:send" class="text-2xl text-primary"></iconify-icon>
+            <span class="font-medium text-dark">Telegram</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- Afbeelding -->
+      <div class="hidden lg:block">
+        <img
+          src="/images/support-person.jpg"
+          alt="Support medewerker met telefoon"
+          class="rounded-xl shadow-2xl w-full object-cover h-96"
+        />
+      </div>
+    </div>
+  </div>
+</section>

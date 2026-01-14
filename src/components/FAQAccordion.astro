@@ -1,0 +1,59 @@
+---
+// src/components/FAQAccordion.astro
+---
+
+<section class="py-20 bg-white">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 text-dark">
+      Veelgestelde vragen
+    </h2>
+
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+      <!-- Kolom 1 -->
+      <div class="space-y-4">
+        <details class="group border-b pb-4">
+          <summary class="flex justify-between items-center cursor-pointer list-none">
+            <span class="font-medium text-dark">Wie zijn de mensen achter GetHost?</span>
+            <iconify-icon icon="mdi:chevron-down" class="text-xl text-gray-500 group-open:rotate-180 transition"></iconify-icon>
+          </summary>
+          <p class="mt-3 text-gray-600 text-sm">
+            GetHost is een jong en dynamisch team van hosting-experts met meer dan 10 jaar ervaring. We zijn gepassioneerd door techniek en klanttevredenheid.
+          </p>
+        </details>
+
+        <details class="group border-b pb-4">
+          <summary class="flex justify-between items-center cursor-pointer list-none">
+            <span class="font-medium text-dark">Wanneer zijn jullie bereikbaar?</span>
+            <iconify-icon icon="mdi:chevron-down" class="text-xl text-gray-500 group-open:rotate-180 transition"></iconify-icon>
+          </summary>
+          <p class="mt-3 text-gray-600 text-sm">
+            Onze support is 7 dagen per week bereikbaar van 08:00 tot 22:00. Buiten deze tijden kun je altijd een ticket aanmaken.
+          </p>
+        </details>
+      </div>
+
+      <!-- Kolom 2 -->
+      <div class="space-y-4">
+        <details class="group border-b pb-4">
+          <summary class="flex justify-between items-center cursor-pointer list-none">
+            <span class="font-medium text-dark">Hoe verhuis ik naar GetHost?</span>
+            <iconify-icon icon="mdi:chevron-down" class="text-xl text-gray-500 group-open:rotate-180 transition"></iconify-icon>
+          </summary>
+          <p class="mt-3 text-gray-600 text-sm">
+            Wij helpen je gratis met de verhuizing! Stuur ons je inloggegevens en wij regelen de rest – zonder downtime.
+          </p>
+        </details>
+
+        <details class="group border-b pb-4">
+          <summary class="flex justify-between items-center cursor-pointer list-none">
+            <span class="font-medium text-dark">Wat voor soort diensten bieden jullie aan?</span>
+            <iconify-icon icon="mdi:chevron-down" class="text-xl text-gray-500 group-open:rotate-180 transition"></iconify-icon>
+          </summary>
+          <p class="mt-3 text-gray-600 text-sm">
+            Wij bieden shared hosting, VPS, domeinregistratie, SSL-certificaten en e-mailhosting – alles onder één dak.
+          </p>
+        </details>
+      </div>
+    </div>
+  </div>
+</section>

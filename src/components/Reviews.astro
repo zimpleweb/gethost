@@ -1,0 +1,92 @@
+---
+// src/components/Reviews.astro
+---
+
+<section class="py-20 bg-[#0f0f0f] text-white">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex flex-col items-center text-center space-y-12">
+
+      <!-- Titel + beschrijving -->
+      <div class="space-y-6">
+        <h2 class="text-4xl md:text-5xl font-bold">
+          Vertrouwd door <span class="text-primary">344.000+</span><br class="hidden md:block" />
+          ondernemers
+        </h2>
+        <p class="text-lg text-gray-300 max-w-2xl mx-auto">
+          Zij kozen voor de beste hosting in Nederland en een partner die écht meedenkt.
+        </p>
+      </div>
+
+      <!-- Rating -->
+      <div class="flex flex-col items-center gap-3">
+        <div class="flex text-yellow-500">
+          {[...Array(5)].map(() => (
+            <iconify-icon icon="mdi:star" class="text-2xl"></iconify-icon>
+          ))}
+        </div>
+        <span class="font-medium text-lg">4.1 van de 5</span>
+        <a href="#" class="text-primary hover:underline text-sm font-medium">
+          Bekijk alle 12.553 reviews
+        </a>
+      </div>
+
+      <!-- Reviews – 2 BIJ 2 GRID -->
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6 w-full max-w-4xl">
+
+        <!-- Review 1 – LINKS BOVEN -->
+        <div class="bg-primary text-white p-6 rounded-3xl shadow-lg">
+          <p class="text-sm italic mb-4">
+            “Super snelle support! Mijn website was binnen 10 minuten weer online na een klein probleem.”
+          </p>
+          <div class="flex items-center gap-3">
+            <div class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center text-xs font-medium">
+              JD
+            </div>
+            <span class="font-medium text-sm">Johan de Vries</span>
+          </div>
+        </div>
+
+        <!-- Review 2 – RECHTS BOVEN -->
+        <div class="bg-primary text-white p-6 rounded-3xl shadow-lg">
+          <p class="text-sm italic mb-4">
+            “Ik ben al 5 jaar klant en nog steeds tevreden. Migratie was gratis en zonder downtime.”
+          </p>
+          <div class="flex items-center gap-3">
+            <div class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center text-xs font-medium">
+              MS
+            </div>
+            <span class="font-medium text-sm">Marieke Smit</span>
+          </div>
+        </div>
+
+        <!-- Review 3 – LINKS ONDER -->
+        <div class="bg-primary text-white p-6 rounded-3xl shadow-lg">
+          <p class="text-sm italic mb-4">
+            “Echt persoonlijke service. Ze denken mee over het beste pakket voor mijn webshop.”
+          </p>
+          <div class="flex items-center gap-3">
+            <div class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center text-xs font-medium">
+              RB
+            </div>
+            <span class="font-medium text-sm">Rik Bakker</span>
+          </div>
+        </div>
+
+        <!-- Review 4 – RECHTS ONDER -->
+        <div class="bg-primary text-white p-6 rounded-3xl shadow-lg">
+          <p class="text-sm italic mb-4">
+            “Voor een digibeet zoals ik is de support top. Altijd geduldig en duidelijk.”
+          </p>
+          <div class="flex items-center gap-3">
+            <div class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center text-xs font-medium">
+              LV
+            </div>
+            <span class="font-medium text-sm">Linda van der Meer</span>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+</section>

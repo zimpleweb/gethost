@@ -1,0 +1,65 @@
+---
+// src/pages/kennisbank/categorie/algemeen.astro
+import BaseLayout from '../../../components/layout/BaseLayout.astro';
+import Header from '../../../components/layout/Header.astro';
+import Footer from '../../../components/layout/Footer.astro';
+import BreadcrumbsWithSearch from '../../../components/knowledge/BreadcrumbsWithSearch.astro';
+import KnowledgeSidebar from '../../../components/knowledge/KnowledgeSidebar.astro';
+---
+
+<BaseLayout title="Algemeen - Kennisbank GetHost">
+  <Header slot="header" />
+
+  <BreadcrumbsWithSearch current="Algemeen" />
+
+  <section class="py-20 bg-gray-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg: px-8">
+      <div class="grid lg:grid-cols-4 gap-12">
+        <div class="lg:col-span-3">
+          <h1 class="text-4xl font-bold text-dark mb-12">Algemeen</h1>
+
+          <div class="space-y-6">
+            <article class="bg-white rounded-2xl p-8 shadow hover:shadow-xl transition">
+              <h2 class="text-2xl font-bold text-dark mb-3">
+                <a href="/kennisbank/verhuizing" class="hover:text-primary transition">Gratis verhuisservice aanvragen</a>
+              </h2>
+              <p class="text-gray-600 leading-relaxed">Wij verhuizen jouw website, e-mail en database gratis en zonder downtime naar GetHost.</p>
+            </article>
+
+            <article class="bg-white rounded-2xl p-8 shadow hover:shadow-xl transition">
+              <h2 class="text-2xl font-bold text-dark mb-3">
+                <a href="/kennisbank/geld-terug" class="hover:text-primary transition">30 dagen geld-terug-garantie</a>
+              </h2>
+              <p class="text-gray-600 leading-relaxed">Niet tevreden? Binnen 30 dagen krijg je jouw geld terug – zonder vragen.</p>
+            </article>
+
+            <article class="bg-white rounded-2xl p-8 shadow hover:shadow-xl transition">
+              <h2 class="text-2xl font-bold text-dark mb-3">
+                <a href="/kennisbank/inloggen" class="hover:text-primary transition">Inloggen op mijn account</a>
+              </h2>
+              <p class="text-gray-600 leading-relaxed">Hoe log je in op jouw GetHost account? Stap-voor-stap uitleg inclusief wachtwoord vergeten en tweefactorauthenticatie.</p>
+            </article>
+
+            <article class="bg-white rounded-2xl p-8 shadow hover:shadow-xl transition">
+              <h2 class="text-2xl font-bold text-dark mb-3">
+                <a href="https://gethost.statuspage.io" target="_blank" class="hover:text-primary transition">Statuspagina controleren</a>
+              </h2>
+              <p class="text-gray-600 leading-relaxed">Is er een storing? Bekijk direct de actuele status van onze systemen op de externe statuspagina.</p>
+            </article>
+
+            <article class="bg-white rounded-2xl p-8 shadow hover:shadow-xl transition">
+              <h2 class="text-2xl font-bold text-dark mb-3">
+                <a href="/klantenservice" class="hover:text-primary transition">Contact opnemen met support</a>
+              </h2>
+              <p class="text-gray-600 leading-relaxed">Telefonisch, via WhatsApp, Telegram of e-mail: zo kom je in contact met onze Nederlandse support.</p>
+            </article>
+          </div>
+        </div>
+
+        <KnowledgeSidebar />
+      </div>
+    </div>
+  </section>
+
+  <Footer slot="footer" />
+</BaseLayout>

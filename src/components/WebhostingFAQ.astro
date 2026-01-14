@@ -1,0 +1,99 @@
+---
+// src/components/WebhostingFAQ.astro
+---
+
+<section class="py-20 bg-white">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 text-dark">
+      Veelgestelde vragen over onze Webhosting
+    </h2>
+
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 max-w-5xl mx-auto">
+      <!-- Kolom 1 – 4 vragen -->
+      <div class="space-y-6">
+        <details class="group border-b pb-4">
+          <summary class="flex justify-between items-center cursor-pointer list-none">
+            <span class="font-semibold text-dark">Wat maakt jullie webhosting sneller dan de concurrentie?</span>
+            <iconify-icon icon="mdi:chevron-down" class="text-xl text-gray-500 group-open:rotate-180 transition"></iconify-icon>
+          </summary>
+          <p class="mt-3 text-gray-600 text-sm leading-relaxed">
+            Wij gebruiken uitsluitend <strong>LiteSpeed Enterprise</strong> webservers met <strong>NVMe SSD-opslag</strong> en Redis object caching. Dit levert tot wel 20× snellere laadtijden op dan traditionele Apache + HDD combinaties. QUIC/HTTP3 is standaard ingeschakeld en afbeeldingen worden automatisch geoptimaliseerd.
+          </p>
+        </details>
+
+        <details class="group border-b pb-4">
+          <summary class="flex justify-between items-center cursor-pointer list-none">
+            <span class="font-semibold text-dark">Is overstappen echt gratis en zonder downtime?</span>
+            <iconify-icon icon="mdi:chevron-down" class="text-xl text-gray-500 group-open:rotate-180 transition"></iconify-icon>
+          </summary>
+          <p class="mt-3 text-gray-600 text-sm leading-relaxed">
+            Ja, 100%. Onze SiteSwitch-verhuisservice is volledig gratis. We kopiëren eerst alles naar onze servers, testen jouw website uitgebreid en wijzigen pas daarna de nameservers. Zo blijft jouw site de hele tijd online – geen minuut downtime.
+          </p>
+        </details>
+
+        <details class="group border-b pb-4">
+          <summary class="flex justify-between items-center cursor-pointer list-none">
+            <span class="font-semibold text-dark">Hoeveel e-mailadressen mag ik aanmaken?</span>
+            <iconify-icon icon="mdi:chevron-down" class="text-xl text-gray-500 group-open:rotate-180 transition"></iconify-icon>
+          </summary>
+          <p class="mt-3 text-gray-600 text-sm leading-relaxed">
+            Onbeperkt! Maak zoveel adressen aan als je wilt (info@, verkoop@, naam@ etc.). Inclusief professionele webmail, SpamExperts spamfilter, autoresponders en IMAP/POP3 ondersteuning.
+          </p>
+        </details>
+
+        <details class="group border-b pb-4">
+          <summary class="flex justify-between items-center cursor-pointer list-none">
+            <span class="font-semibold text-dark">Krijg ik een gratis SSL-certificaat?</span>
+            <iconify-icon icon="mdi:chevron-down" class="text-xl text-gray-500 group-open:rotate-180 transition"></iconify-icon>
+          </summary>
+          <p class="mt-3 text-gray-600 text-sm leading-relaxed">
+            Ja, elk pakket bevat een gratis Let’s Encrypt SSL-certificaat met automatische verlenging. Wildcard- en EV-certificaten zijn ook mogelijk tegen een kleine meerprijs.
+          </p>
+        </details>
+      </div>
+
+      <!-- Kolom 2 – 4 vragen -->
+      <div class="space-y-6">
+        <details class="group border-b pb-4">
+          <summary class="flex justify-between items-center cursor-pointer list-none">
+            <span class="font-semibold text-dark">Wordt er automatisch een back-up gemaakt?</span>
+            <iconify-icon icon="mdi:chevron-down" class="text-xl text-gray-500 group-open:rotate-180 transition"></iconify-icon>
+          </summary>
+          <p class="mt-3 text-gray-600 text-sm leading-relaxed">
+            Elke nacht maken we een volledige back-up van bestanden, databases en e-mail. Deze bewaren we 30 dagen op een aparte locatie. Met één klik in cPanel zet je alles terug – ook als je per ongeluk iets verwijdert.
+          </p>
+        </details>
+
+        <details class="group border-b pb-4">
+          <summary class="flex justify-between items-center cursor-pointer list-none">
+            <span class="font-semibold text-dark">Kan ik WordPress of een webshop eenvoudig installeren?</span>
+            <iconify-icon icon="mdi:chevron-down" class="text-xl text-gray-500 group-open:rotate-180 transition"></iconify-icon>
+          </summary>
+          <p class="mt-3 text-gray-600 text-sm leading-relaxed">
+            Ja, met Softaculous installeer je met één klik meer dan 400 apps, waaronder WordPress, WooCommerce, Joomla en Magento. Liever dat wij het doen? Onze installatieservice is helemaal gratis.
+          </p>
+        </details>
+
+        <details class="group border-b pb-4">
+          <summary class="flex justify-between items-center cursor-pointer list-none">
+            <span class="font-semibold text-dark">Wat als ik meer resources nodig heb?</span>
+            <iconify-icon icon="mdi:chevron-down" class="text-xl text-gray-500 group-open:rotate-180 transition"></iconify-icon>
+          </summary>
+          <p class="mt-3 text-gray-600 text-sm leading-relaxed">
+            Upgraden kan op elk moment met één klik en zonder downtime. Groei je door je pakket heen? Dan schakelen we je kosteloos om naar een groter pakket of VPS. Je betaalt alleen het prijsverschil.
+          </p>
+        </details>
+
+        <details class="group border-b pb-4">
+          <summary class="flex justify-between items-center cursor-pointer list-none">
+            <span class="font-semibold text-dark">Wat als ik niet tevreden ben?</span>
+            <iconify-icon icon="mdi:chevron-down" class="text-xl text-gray-500 group-open:rotate-180 transition"></iconify-icon>
+          </summary>
+          <p class="mt-3 text-gray-600 text-sm leading-relaxed">
+            Binnen 30 dagen niet tevreden? Dan krijg je jouw geld volledig terug – zonder vragen of kleine lettertjes. Meer dan 344.000 klanten gingen je voor en bleven omdat het gewoon goed is.
+          </p>
+        </details>
+      </div>
+    </div>
+  </div>
+</section>

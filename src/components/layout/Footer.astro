@@ -1,0 +1,76 @@
+---
+// src/components/layout/Footer.astro
+---
+
+<footer class="bg-dark text-white">
+  <!-- Hoofdfooter -->
+  <div class="bg-dark/95 py-12">
+    <div class="max-w-7xl mx-auto px-4 grid grid-cols-1 md:grid-cols-4 gap-8">
+      <!-- Reviews -->
+      <div>
+        <div class="flex items-center gap-2 mb-3">
+          <span class="text-2xl">★★★★★</span>
+          <span class="text-yellow-400 font-bold">4,1 van de 5</span>
+        </div>
+        <a href="https://www.trustpilot.com/review/gethost.nl" class="text-sm hover:underline">Bekijk alle 12.553 reviews</a>
+      </div>
+
+      <!-- Kolommen -->
+      <div>
+        <h3 class="font-bold mb-4">Domeinnamen</h3>
+        <ul class="space-y-2 text-sm text-gray-300">
+          <li><a href="/domeinnamen" class="hover:text-white">Domeinnaam registreren</a></li>
+          <li><a href="/domeinnamen" class="hover:text-white">Domeinnaam prijzen</a></li>
+          <li><a href="/domein-taxatie" class="hover:text-white">Domeinnaam taxatie</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h3 class="font-bold mb-4">Hosting</h3>
+        <ul class="space-y-2 text-sm text-gray-300">
+          <li><a href="/webhosting" class="hover:text-white">Webhosting</a></li>
+          <li><a href="/webhosting-pro" class="hover:text-white">Webhosting Pro</a></li>
+          <li><a href="/wordpress-hosting" class="hover:text-white">WordPress hosting</a></li>
+          <li><a href="/webshop-hosting" class="hover:text-white">Webshop hosting</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h3 class="font-bold mb-4">Contact</h3>
+        <ul class="space-y-2 text-sm text-gray-300">
+          <li><a href="/kennisbank" class="hover:text-white">Kennisbank</a></li>
+          <li><a href="/blog" class="hover:text-white">Blog</a></li>
+          <li><a href="/over-ons" class="hover:text-white">Over ons</a></li>
+          <li><a href="/werken-bij" class="hover:text-white">Werken bij GetHost</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- Subfooter met links -->
+  <div class="bg-black/40 py-8 border-t border-white/10">
+    <div class="max-w-7xl mx-auto px-4 text-center text-sm text-gray-400">
+      <div class="flex flex-wrap justify-center gap-4 mb-4">
+        <a href="/algemene-voorwaarden" class="hover:text-white">Algemene voorwaarden</a>
+        <a href="/privacy" class="hover:text-white">Privacy en cookieverklaring</a>
+        <a href="/fair-use" class="hover:text-white">Fair use beleid</a>
+        <a href="/herroepingsbeleid" class="hover:text-white">Herroepingsbeleid</a>
+        <a href="/responsible-disclosure" class="hover:text-white">Responsible disclosure</a>
+        <a href="/notice-takedown" class="hover:text-white">Notice & Takedown</a>
+        <a href="/data-uitwisseling" class="hover:text-white">Beleid uitwisseling persoonsgegevens</a>
+        <a href="/disclaimer" class="hover:text-white">Disclaimer</a>
+      </div>
+      <p class="text-xs">Prijzen zijn excl. btw tenzij expliciet anders aangegeven © 2025</p>
+    </div>
+  </div>
+
+  <!-- Social media (optioneel onderaan) -->
+  <div class="bg-black py-6 text-center">
+    <div class="flex justify-center gap-6">
+      <a href="#" class="text-2xl hover:text-primary"><iconify-icon icon="mdi:facebook"></iconify-icon></a>
+      <a href="#" class="text-2xl hover:text-primary"><iconify-icon icon="mdi:linkedin"></iconify-icon></a>
+      <a href="#" class="text-2xl hover:text-primary"><iconify-icon icon="mdi:instagram"></iconify-icon></a>
+      <a href="#" class="text-2xl hover:text-primary"><iconify-icon icon="mdi:youtube"></iconify-icon></a>
+    </div>
+  </div>
+</footer>

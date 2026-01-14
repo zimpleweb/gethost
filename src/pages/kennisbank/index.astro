@@ -1,0 +1,129 @@
+---
+// src/pages/kennisbank/index.astro
+import BaseLayout from '../../components/layout/BaseLayout.astro';
+import Header from '../../components/layout/Header.astro';
+import Footer from '../../components/layout/Footer.astro';
+import BreadcrumbsWithSearch from '../../components/knowledge/BreadcrumbsWithSearch.astro';
+---
+
+<BaseLayout title="Kennisbank - GetHost">
+  <Header slot="header" />
+
+  <BreadcrumbsWithSearch />
+
+  <section class="py-20 bg-gray-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid md:grid-cols-3 gap-10">
+        <div class="bg-white rounded-2xl p-8 shadow hover:shadow-xl transition">
+          <h3 class="text-2xl font-bold text-dark mb-6">Algemeen</h3>
+          <ul class="space-y-4 text-gray-700">
+            <li><a href="/kennisbank/verhuizing" class="hover:text-primary transition">Gratis verhuisservice aanvragen</a></li>
+            <li><a href="/kennisbank/geld-terug" class="hover:text-primary transition">30 dagen geld-terug-garantie</a></li>
+            <li><a href="/kennisbank/inloggen" class="hover:text-primary transition">Inloggen op mijn account</a></li>
+            <li><a href="https://gethost.statuspage.io" target="_blank" class="hover:text-primary transition">Statuspagina controleren</a></li>
+            <li><a href="/klantenservice" class="hover:text-primary transition">Contact opnemen met support</a></li>
+          </ul>
+          <a href="/kennisbank/categorie/algemeen" class="text-red-600 font-medium mt-8 inline-block hover:underline">Meer van Algemeen</a>
+        </div>
+
+        <div class="bg-white rounded-2xl p-8 shadow hover:shadow-xl transition">
+          <h3 class="text-2xl font-bold text-dark mb-6">Domeinnaam</h3>
+          <ul class="space-y-4 text-gray-700">
+            <li><a href="/kennisbank/domein-registreren" class="hover:text-primary transition">Domeinnaam registreren</a></li>
+            <li><a href="/kennisbank/domein-verhuizen" class="hover:text-primary transition">Domein verhuizen naar GetHost</a></li>
+            <li><a href="/kennisbank/whois-privacy" class="hover:text-primary transition">WHOIS privacy activeren</a></li>
+            <li><a href="/kennisbank/dns-wijzigen" class="hover:text-primary transition">DNS records aanpassen</a></li>
+            <li><a href="/kennisbank/quarantaine" class="hover:text-primary transition">Domein uit quarantaine halen</a></li>
+          </ul>
+          <a href="/kennisbank/categorie/domeinnaam" class="text-red-600 font-medium mt-8 inline-block hover:underline">Meer van Domeinnaam</a>
+        </div>
+
+        <div class="bg-white rounded-2xl p-8 shadow hover:shadow-xl transition">
+          <h3 class="text-2xl font-bold text-dark mb-6">Webhosting</h3>
+          <ul class="space-y-4 text-gray-700">
+            <li><a href="/kennisbank/directadmin" class="hover:text-primary transition">Inloggen op DirectAdmin</a></li>
+            <li><a href="/kennisbank/ssh" class="hover:text-primary transition">SSH toegang instellen</a></li>
+            <li><a href="/kennisbank/ftp" class="hover:text-primary transition">Bestanden uploaden via FTP</a></li>
+            <li><a href="/kennisbank/database" class="hover:text-primary transition">Database aanmaken</a></li>
+            <li><a href="/kennisbank/inode" class="hover:text-primary transition">Wat is een inode limiet?</a></li>
+          </ul>
+          <a href="/kennisbank/categorie/webhosting" class="text-red-600 font-medium mt-8 inline-block hover:underline">Meer van Webhosting</a>
+        </div>
+
+        <div class="bg-white rounded-2xl p-8 shadow hover:shadow-xl transition">
+          <h3 class="text-2xl font-bold text-dark mb-6">E-mail</h3>
+          <ul class="space-y-4 text-gray-700">
+            <li><a href="/kennisbank/email-outlook" class="hover:text-primary transition">E-mail instellen in Outlook</a></li>
+            <li><a href="/kennisbank/webmail" class="hover:text-primary transition">Inloggen op webmail</a></li>
+            <li><a href="/kennisbank/spamfilter" class="hover:text-primary transition">Spamfilter instellen</a></li>
+            <li><a href="/kennisbank/autoresponder" class="hover:text-primary transition">Autoresponder instellen</a></li>
+            <li><a href="/kennisbank/email-forwarding" class="hover:text-primary transition">E-mail doorsturen</a></li>
+          </ul>
+          <a href="/kennisbank/categorie/email" class="text-red-600 font-medium mt-8 inline-block hover:underline">Meer van E-mail</a>
+        </div>
+
+        <div class="bg-white rounded-2xl p-8 shadow hover:shadow-xl transition">
+          <h3 class="text-2xl font-bold text-dark mb-6">WordPress</h3>
+          <ul class="space-y-4 text-gray-700">
+            <li><a href="/kennisbank/wordpress-installeren" class="hover:text-primary transition">WordPress installeren</a></li>
+            <li><a href="/kennisbank/wordpress-updaten" class="hover:text-primary transition">WordPress veilig updaten</a></li>
+            <li><a href="/kennisbank/wordpress-cache" class="hover:text-primary transition">Cache plugin kiezen</a></li>
+            <li><a href="/kennisbank/wordpress-backup" class="hover:text-primary transition">Automatische backups</a></li>
+            <li><a href="/kennisbank/wordpress-beveiliging" class="hover:text-primary transition">WordPress beveiligen</a></li>
+          </ul>
+          <a href="/kennisbank/categorie/wordpress" class="text-red-600 font-medium mt-8 inline-block hover:underline">Meer van WordPress</a>
+        </div>
+
+        <div class="bg-white rounded-2xl p-8 shadow hover:shadow-xl transition">
+          <h3 class="text-2xl font-bold text-dark mb-6">VPS</h3>
+          <ul class="space-y-4 text-gray-700">
+            <li><a href="/kennisbank/vps-inloggen" class="hover:text-primary transition">Inloggen op mijn VPS</a></li>
+            <li><a href="/kennisbank/directadmin-vps" class="hover:text-primary transition">DirectAdmin op VPS installeren</a></li>
+            <li><a href="/kennisbank/vps-resources" class="hover:text-primary transition">Resources upgraden</a></li>
+            <li><a href="/kennisbank/vps-monitoring" class="hover:text-primary transition">Monitoring activeren</a></li>
+            <li><a href="/kennisbank/vps-backup" class="hover:text-primary transition">Back-ups instellen</a></li>
+          </ul>
+          <a href="/kennisbank/categorie/vps" class="text-red-600 font-medium mt-8 inline-block hover:underline">Meer van VPS</a>
+        </div>
+
+        <div class="bg-white rounded-2xl p-8 shadow hover:shadow-xl transition">
+          <h3 class="text-2xl font-bold text-dark mb-6">Facturatie</h3>
+          <ul class="space-y-4 text-gray-700">
+            <li><a href="/kennisbank/factuur-betalen" class="hover:text-primary transition">Factuur betalen</a></li>
+            <li><a href="/kennisbank/automatische-incasso" class="hover:text-primary transition">Automatische incasso instellen</a></li>
+            <li><a href="/kennisbank/factuur-adres" class="hover:text-primary transition">Factuuradres wijzigen</a></li>
+            <li><a href="/kennisbank/btw-vrijstelling" class="hover:text-primary transition">BTW-vrijstelling aanvragen</a></li>
+            <li><a href="/kennisbank/opzeggen" class="hover:text-primary transition">Pakket opzeggen</a></li>
+          </ul>
+          <a href="/kennisbank/categorie/facturatie" class="text-red-600 font-medium mt-8 inline-block hover:underline">Meer van Facturatie</a>
+        </div>
+
+        <div class="bg-white rounded-2xl p-8 shadow hover:shadow-xl transition">
+          <h3 class="text-2xl font-bold text-dark mb-6">Beveiliging</h3>
+          <ul class="space-y-4 text-gray-700">
+            <li><a href="/kennisbank/ssl-activeren" class="hover:text-primary transition">SSL certificaat activeren</a></li>
+            <li><a href="/kennisbank/malware-scan" class="hover:text-primary transition">Malware scan uitvoeren</a></li>
+            <li><a href="/kennisbank/imunify360" class="hover:text-primary transition">Imunify360 activeren</a></li>
+            <li><a href="/kennisbank/2fa-account" class="hover:text-primary transition">2FA instellen in account</a></li>
+            <li><a href="/kennisbank/bruteforce" class="hover:text-primary transition">Bruteforce bescherming</a></li>
+          </ul>
+          <a href="/kennisbank/categorie/beveiliging" class="text-red-600 font-medium mt-8 inline-block hover:underline">Meer van Beveiliging</a>
+        </div>
+
+        <div class="bg-white rounded-2xl p-8 shadow hover:shadow-xl transition">
+          <h3 class="text-2xl font-bold text-dark mb-6">Overige</h3>
+          <ul class="space-y-4 text-gray-700">
+            <li><a href="/kennisbank/softaculous" class="hover:text-primary transition">Apps installeren via Softaculous</a></li>
+            <li><a href="/kennisbank/cronjobs" class="hover:text-primary transition">Cronjobs instellen</a></li>
+            <li><a href="/kennisbank/reseller" class="hover:text-primary transition">Reseller hosting</a></li>
+            <li><a href="/kennisbank/ip-blokkade" class="hover:text-primary transition">IP deblokkeren</a></li>
+            <li><a href="/kennisbank/php-versie" class="hover:text-primary transition">PHP versie wijzigen</a></li>
+          </ul>
+          <a href="/kennisbank/categorie/overige" class="text-red-600 font-medium mt-8 inline-block hover:underline">Meer van Overige</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <Footer slot="footer" />
+</BaseLayout>

@@ -1,0 +1,13 @@
+{
+  "extends": "astro/tsconfigs/strict",
+  "include": [".astro/types.d.ts", "**/*"],
+  "exclude": ["dist"],
+  "compilerOptions": {
+    // Dit maakt @/ mogelijk (vanaf src/)
+    "baseUrl": "src",
+    "paths": {
+      "@/*": ["*"]
+    }
+    // Astro herkent dit automatisch – geen extra config nodig
+  }
+}

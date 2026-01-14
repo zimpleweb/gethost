@@ -1,0 +1,17 @@
+{
+  "name": "gethost",
+  "type": "module",
+  "version": "0.0.1",
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro"
+  },
+  "dependencies": {
+    "@astrojs/tailwind": "^6.0.2",
+    "@iconify-icons/mdi": "^1.2.48",
+    "astro": "^5.15.7",
+    "daisyui": "^5.5.3"
+  }
+}

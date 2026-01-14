@@ -1,0 +1,216 @@
+---
+// src/pages/klantenservice.astro
+import BaseLayout from '../components/layout/BaseLayout.astro';
+import Header from '../components/layout/Header.astro';
+import Footer from '../components/layout/Footer.astro';
+import SupportCTA from '../components/SupportCTA.astro';
+---
+
+<BaseLayout title="Klantenservice - GetHost">
+  <Header slot="header" />
+
+  <section class="py-20 bg-[#0f0f0f] text-white">
+    <div class="max-w-7xl mx-auto px-4 text-center">
+      <h1 class="text-4xl md:text-5xl font-bold mb-6">Wij helpen je graag verder</h1>
+    </div>
+  </section>
+
+  <section class="py-16 bg-gray-50">
+    <div class="max-w-7xl mx-auto px-4">
+      <div class="text-center mb-12">
+        <p class="text-lg text-red-600 font-medium">
+          Onze telefonische support is momenteel gesloten.<br>
+          Wij zijn weer bereikbaar op de eerstvolgende werkdag vanaf 10:00 uur.
+        </p>
+      </div>
+
+      <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto">
+        <a href="tel:+31853016141" class="bg-white rounded-2xl p-8 text-center shadow hover:shadow-xl transition flex flex-col justify-center h-56">
+          <div class="w-12 h-12 bg-orange-100 rounded-xl flex items-center justify-center mx-auto mb-4">
+            <iconify-icon icon="mdi:phone" class="text-2xl text-orange-600"></iconify-icon>
+          </div>
+          <h3 class="text-lg font-bold text-dark mb-2">Telefoon & Fax</h3>
+          <p class="text-base font-medium text-dark">+31 (0)85 301 6141</p>
+        </a>
+
+        <a href="https://wa.me/31853016141" target="_blank" class="bg-white rounded-2xl p-8 text-center shadow hover:shadow-xl transition flex flex-col justify-center h-56">
+          <div class="w-12 h-12 bg-green-100 rounded-xl flex items-center justify-center mx-auto mb-4">
+            <iconify-icon icon="mdi:whatsapp" class="text-2xl text-green-600"></iconify-icon>
+          </div>
+          <h3 class="text-lg font-bold text-dark mb-2">WhatsApp</h3>
+          <p class="text-base font-medium text-dark">+31 (0)85 301 6141</p>
+        </a>
+
+        <a href="https://t.me/GetHostSupport" target="_blank" class="bg-white rounded-2xl p-8 text-center shadow hover:shadow-xl transition flex flex-col justify-center h-56">
+          <div class="w-12 h-12 bg-blue-100 rounded-xl flex items-center justify-center mx-auto mb-4">
+            <iconify-icon icon="mdi:send" class="text-2xl text-blue-600"></iconify-icon>
+          </div>
+          <h3 class="text-lg font-bold text-dark mb-2">Telegram</h3>
+          <p class="text-base font-medium text-dark">Chat en bericht</p>
+        </a>
+
+        <a href="mailto:info@gethost.nl" class="bg-white rounded-2xl p-8 text-center shadow hover:shadow-xl transition flex flex-col justify-center h-56">
+          <div class="w-12 h-12 bg-amber-100 rounded-xl flex items-center justify-center mx-auto mb-4">
+            <iconify-icon icon="mdi:email" class="text-2xl text-amber-600"></iconify-icon>
+          </div>
+          <h3 class="text-lg font-bold text-dark mb-2">E-mail</h3>
+          <p class="text-base font-medium text-primary">info@gethost.nl</p>
+        </a>
+      </div>
+
+      <div class="text-center mt-12">
+        <a href="https://account.gethost.nl" target="_blank" class="inline-block bg-primary text-white hover:bg-primary-dark px-10 py-4 rounded-xl font-bold text-lg transition shadow-lg">
+          Ticket aanmaken
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="text-4xl font-bold text-center mb-12 text-dark">GetHost Bedrijfsgegevens</h2>
+      <div class="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto text-sm">
+        <div class="bg-gray-50 rounded-2xl p-6"><h3 class="font-bold text-dark mb-4">Kantooradres</h3><p>Nieuw Amsterdamsestraat 40<br>7814VA Emmen</p></div>
+        <div class="bg-gray-50 rounded-2xl p-6"><h3 class="font-bold text-dark mb-4">Datacentrum</h3><p>De Linge 26<br>8253 PJ Dronten</p></div>
+        <div class="bg-gray-50 rounded-2xl p-6"><h3 class="font-bold text-dark mb-4">Bank (Nederland)</h3><p>IBAN: NL53 KNAB 0282 5166 89<br>BIC: KNABNL2H<br>Bank: KNAB</p></div>
+        <div class="bg-gray-50 rounded-2xl p-6"><h3 class="font-bold text-dark mb-4">BTW & K.v.K.</h3><p>BTW: NL819725067B01<br>K.v.K.: 01129656 te Emmen</p></div>
+        <div class="bg-gray-50 rounded-2xl p-6"><h3 class="font-bold text-dark mb-4">E-mailadressen</h3><p>Verkoop: <a href="mailto:sales@gethost.nl" class="text-primary underline">sales@gethost.nl</a><br>Administratie: <a href="mailto:administratie@gethost.nl" class="text-primary underline">administratie@gethost.nl</a></p></div>
+        <div class="bg-gray-50 rounded-2xl p-6"><h3 class="font-bold text-dark mb-4">Storingen</h3><p><a href="https://gethost.statuspage.io" target="_blank" class="text-primary underline font-medium">gethost.statuspage.io</a></p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-20 bg-gray-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="text-4xl font-bold text-center mb-16 text-dark">Veelgestelde vragen</h2>
+
+      <div class="grid md:grid-cols-3 gap-12 max-w-6xl mx-auto">
+        <!-- Kolom 1 -->
+        <div class="space-y-10">
+          <div>
+            <h3 class="text-2xl font-bold text-dark mb-6">Algemeen</h3>
+            <ul class="space-y-4">
+              <li class="flex items-start gap-3"><span class="text-primary text-lg leading-none">•</span> <a href="/kennisbank/verhuizing" class="text-gray-700 hover:text-primary transition">Gratis verhuisservice aanvragen</a></li>
+              <li class="flex items-start gap-3"><span class="text-primary text-lg leading-none">•</span> <a href="/kennisbank/geld-terug" class="text-gray-700 hover:text-primary transition">30 dagen geld-terug-garantie</a></li>
+              <li class="flex items-start gap-3"><span class="text-primary text-lg leading-none">•</span> <a href="/kennisbank/inloggen" class="text-gray-700 hover:text-primary transition">Inloggen op mijn account</a></li>
+              <li class="flex items-start gap-3"><span class="text-primary text-lg leading-none">•</span> <a href="https://gethost.statuspage.io" target="_blank" class="text-gray-700 hover:text-primary transition">Statuspagina controleren</a></li>
+              <li class="flex items-start gap-3"><span class="text-primary text-lg leading-none">•</span> <a href="/klantenservice" class="text-gray-700 hover:text-primary transition">Contact opnemen met support</a></li>
+            </ul>
+            <a href="/kennisbank/categorie/algemeen" class="text-red-600 font-medium mt-6 inline-block hover:underline">Meer weergeven</a>
+          </div>
+
+          <div>
+            <h3 class="text-2xl font-bold text-dark mb-6">Domeinnaam</h3>
+            <ul class="space-y-4">
+              <li class="flex items-start gap-3"><span class="text-primary text-lg leading-none">•</span> <a href="/kennisbank/domein-registreren" class="text-gray-700 hover:text-primary transition">Domeinnaam registreren</a></li>
+              <li class="flex items-start gap-3"><span class="text-primary text-lg leading-none">•</span> <a href="/kennisbank/domein-verhuizen" class="text-gray-700 hover:text-primary transition">Domein verhuizen naar GetHost</a></li>
+              <li class="flex items-start gap-3"><span class="text-primary text-lg leading-none">•</span> <a href="/kennisbank/whois-privacy" class="text-gray-700 hover:text-primary transition">WHOIS privacy activeren</a></li>
+              <li class="flex items-start gap-3"><span class="text-primary text-lg leading-none">•</span> <a href="/kennisbank/dns-wijzigen" class="text-gray-700 hover:text-primary transition">DNS records aanpassen</a></li>
+              <li class="flex items-start gap-3"><span class="text-primary text-lg leading-none">•</span> <a href="/kennisbank/quarantaine" class="text-gray-700 hover:text-primary transition">Domein uit quarantaine halen</a></li>
+            </ul>
+            <a href="/kennisbank/categorie/domeinnaam" class="text-red-600 font-medium mt-6 inline-block hover:underline">Meer weergeven</a>
+          </div>
+
+          <div>
+            <h3 class="text-2xl font-bold text-dark mb-6">Webhosting</h3>
+            <ul class="space-y-4">
+              <li class="flex items-start gap-3"><span class="text-primary text-lg leading-none">•</span> <a href="/kennisbank/directadmin" class="text-gray-700 hover:text-primary transition">Inloggen op DirectAdmin</a></li>
+              <li class="flex items-start gap-3"><span class="text-primary text-lg leading-none">•</span> <a href="/kennisbank/ssh" class="text-gray-700 hover:text-primary transition">SSH toegang instellen</a></li>
+              <li class="flex items-start gap-3"><span class="text-primary text-lg leading-none">•</span> <a href="/kennisbank/ftp" class="text-gray-700 hover:text-primary transition">Bestanden uploaden via FTP</a></li>
+              <li class="flex items-start gap-3"><span class="text-primary text-lg leading-none">•</span> <a href="/kennisbank/database" class="text-gray-700 hover:text-primary transition">Database aanmaken</a></li>
+              <li class="flex items-start gap-3"><span class="text-primary text-lg leading-none">•</span> <a href="/kennisbank/inode" class="text-gray-700 hover:text-primary transition">Wat is een inode limiet?</a></li>
+            </ul>
+            <a href="/kennisbank/categorie/webhosting" class="text-red-600 font-medium mt-6 inline-block hover:underline">Meer weergeven</a>
+          </div>
+        </div>
+
+        <!-- Kolom 2 -->
+        <div class="space-y-10">
+          <div>
+            <h3 class="text-2xl font-bold text-dark mb-6">E-mail</h3>
+            <ul class="space-y-4">
+              <li class="flex items-start gap-3"><span class="text-primary text-lg leading-none">•</span> <a href="/kennisbank/email-outlook" class="text-gray-700 hover:text-primary transition">E-mail instellen in Outlook</a></li>
+              <li class="flex items-start gap-3"><span class="text-primary text-lg leading-none">•</span> <a href="/kennisbank/webmail" class="text-gray-700 hover:text-primary transition">Inloggen op webmail</a></li>
+              <li class="flex items-start gap-3"><span class="text-primary text-lg leading-none">•</span> <a href="/kennisbank/spamfilter" class="text-gray-700 hover:text-primary transition">Spamfilter instellen</a></li>
+              <li class="flex items-start gap-3"><span class="text-primary text-lg leading-none">•</span> <a href="/kennisbank/autoresponder" class="text-gray-700 hover:text-primary transition">Autoresponder instellen</a></li>
+              <li class="flex items-start gap-3"><span class="text-primary text-lg leading-none">•</span> <a href="/kennisbank/email-forwarding" class="text-gray-700 hover:text-primary transition">E-mail doorsturen</a></li>
+            </ul>
+            <a href="/kennisbank/categorie/email" class="text-red-600 font-medium mt-6 inline-block hover:underline">Meer weergeven</a>
+          </div>
+
+          <div>
+            <h3 class="text-2xl font-bold text-dark mb-6">WordPress</h3>
+            <ul class="space-y-4">
+              <li class="flex items-start gap-3"><span class="text-primary text-lg leading-none">•</span> <a href="/kennisbank/wordpress-installeren" class="text-gray-700 hover:text-primary transition">WordPress installeren</a></li>
+              <li class="flex items-start gap-3"><span class="text-primary text-lg leading-none">•</span> <a href="/kennisbank/wordpress-updaten" class="text-gray-700 hover:text-primary transition">WordPress veilig updaten</a></li>
+              <li class="flex items-start gap-3"><span class="text-primary text-lg leading-none">•</span> <a href="/kennisbank/wordpress-cache" class="text-gray-700 hover:text-primary transition">Cache plugin kiezen</a></li>
+              <li class="flex items-start gap-3"><span class="text-primary text-lg leading-none">•</span> <a href="/kennisbank/wordpress-backup" class="text-gray-700 hover:text-primary transition">Automatische backups</a></li>
+              <li class="flex items-start gap-3"><span class="text-primary text-lg leading-none">•</span> <a href="/kennisbank/wordpress-beveiliging" class="text-gray-700 hover:text-primary transition">WordPress beveiligen</a></li>
+            </ul>
+            <a href="/kennisbank/categorie/wordpress" class="text-red-600 font-medium mt-6 inline-block hover:underline">Meer weergeven</a>
+          </div>
+
+          <div>
+            <h3 class="text-2xl font-bold text-dark mb-6">VPS</h3>
+            <ul class="space-y-4">
+              <li class="flex items-start gap-3"><span class="text-primary text-lg leading-none">•</span> <a href="/kennisbank/vps-inloggen" class="text-gray-700 hover:text-primary transition">Inloggen op mijn VPS</a></li>
+              <li class="flex items-start gap-3"><span class="text-primary text-lg leading-none">•</span> <a href="/kennisbank/directadmin-vps" class="text-gray-700 hover:text-primary transition">DirectAdmin op VPS installeren</a></li>
+              <li class="flex items-start gap-3"><span class="text-primary text-lg leading-none">•</span> <a href="/kennisbank/vps-resources" class="text-gray-700 hover:text-primary transition">Resources upgraden</a></li>
+              <li class="flex items-start gap-3"><span class="text-primary text-lg leading-none">•</span> <a href="/kennisbank/vps-monitoring" class="text-gray-700 hover:text-primary transition">Monitoring activeren</a></li>
+              <li class="flex items-start gap-3"><span class="text-primary text-lg leading-none">•</span> <a href="/kennisbank/vps-backup" class="text-gray-700 hover:text-primary transition">Back-ups instellen</a></li>
+            </ul>
+            <a href="/kennisbank/categorie/vps" class="text-red-600 font-medium mt-6 inline-block hover:underline">Meer weergeven</a>
+          </div>
+        </div>
+
+        <!-- Kolom 3 -->
+        <div class="space-y-10">
+          <div>
+            <h3 class="text-2xl font-bold text-dark mb-6">Facturatie</h3>
+            <ul class="space-y-4">
+              <li class="flex items-start gap-3"><span class="text-primary text-lg leading-none">•</span> <a href="/kennisbank/factuur-betalen" class="text-gray-700 hover:text-primary transition">Factuur betalen</a></li>
+              <li class="flex items-start gap-3"><span class="text-primary text-lg leading-none">•</span> <a href="/kennisbank/automatische-incasso" class="text-gray-700 hover:text-primary transition">Automatische incasso instellen</a></li>
+              <li class="flex items-start gap-3"><span class="text-primary text-lg leading-none">•</span> <a href="/kennisbank/factuur-adres" class="text-gray-700 hover:text-primary transition">Factuuradres wijzigen</a></li>
+              <li class="flex items-start gap-3"><span class="text-primary text-lg leading-none">•</span> <a href="/kennisbank/btw-vrijstelling" class="text-gray-700 hover:text-primary transition">BTW-vrijstelling aanvragen</a></li>
+              <li class="flex items-start gap-3"><span class="text-primary text-lg leading-none">•</span> <a href="/kennisbank/opzeggen" class="text-gray-700 hover:text-primary transition">Pakket opzeggen</a></li>
+            </ul>
+            <a href="/kennisbank/categorie/facturatie" class="text-red-600 font-medium mt-6 inline-block hover:underline">Meer weergeven</a>
+          </div>
+
+          <div>
+            <h3 class="text-2xl font-bold text-dark mb-6">Beveiliging</h3>
+            <ul class="space-y-4">
+              <li class="flex items-start gap-3"><span class="text-primary text-lg leading-none">•</span> <a href="/kennisbank/ssl-activeren" class="text-gray-700 hover:text-primary transition">SSL certificaat activeren</a></li>
+              <li class="flex items-start gap-3"><span class="text-primary text-lg leading-none">•</span> <a href="/kennisbank/malware-scan" class="text-gray-700 hover:text-primary transition">Malware scan uitvoeren</a></li>
+              <li class="flex items-start gap-3"><span class="text-primary text-lg leading-none">•</span> <a href="/kennisbank/imunify360" class="text-gray-700 hover:text-primary transition">Imunify360 activeren</a></li>
+              <li class="flex items-start gap-3"><span class="text-primary text-lg leading-none">•</span> <a href="/kennisbank/2fa-account" class="text-gray-700 hover:text-primary transition">2FA instellen in account</a></li>
+              <li class="flex items-start gap-3"><span class="text-primary text-lg leading-none">•</span> <a href="/kennisbank/bruteforce" class="text-gray-700 hover:text-primary transition">Bruteforce bescherming</a></li>
+            </ul>
+            <a href="/kennisbank/categorie/beveiliging" class="text-red-600 font-medium mt-6 inline-block hover:underline">Meer weergeven</a>
+          </div>
+
+          <div>
+            <h3 class="text-2xl font-bold text-dark mb-6">Overige</h3>
+            <ul class="space-y-4">
+              <li class="flex items-start gap-3"><span class="text-primary text-lg leading-none">•</span> <a href="/kennisbank/softaculous" class="text-gray-700 hover:text-primary transition">Apps installeren via Softaculous</a></li>
+              <li class="flex items-start gap-3"><span class="text-primary text-lg leading-none">•</span> <a href="/kennisbank/cronjobs" class="text-gray-700 hover:text-primary transition">Cronjobs instellen</a></li>
+              <li class="flex items-start gap-3"><span class="text-primary text-lg leading-none">•</span> <a href="/kennisbank/reseller" class="text-gray-700 hover:text-primary transition">Reseller hosting</a></li>
+              <li class="flex items-start gap-3"><span class="text-primary text-lg leading-none">•</span> <a href="/kennisbank/ip-blokkade" class="text-gray-700 hover:text-primary transition">IP deblokkeren</a></li>
+              <li class="flex items-start gap-3"><span class="text-primary text-lg leading-none">•</span> <a href="/kennisbank/php-versie" class="text-gray-700 hover:text-primary transition">PHP versie wijzigen</a></li>
+            </ul>
+            <a href="/kennisbank/categorie/overige" class="text-red-600 font-medium mt-6 inline-block hover:underline">Meer weergeven</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="text-center mt-16">
+        <a href="/kennisbank" class="inline-block bg-primary text-white hover:bg-primary-dark px-12 py-5 rounded-xl font-bold text-xl transition shadow-lg">
+          Bekijk de volledige kennisbank
+        </a>
+      </div>
+    </ Rap
+  </section>
+
+  <SupportCTA />
+  <Footer slot="footer" />
+</BaseLayout>

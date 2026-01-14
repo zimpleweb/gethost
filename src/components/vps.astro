@@ -1,0 +1,184 @@
+---
+// src/pages/vps.astro
+import BaseLayout from '../components/layout/BaseLayout.astro';
+import Header from '../components/layout/Header.astro';
+import Footer from '../components/layout/Footer.astro';
+import SupportCTA from '../components/SupportCTA.astro';
+import FAQAccordion from '../components/FAQAccordion.astro';
+---
+
+<BaseLayout 
+  title="VPS Hosting - Volledige controle & maximale prestaties | GetHost"
+  description="Krachtige KVM VPS met NVMe SSD, root-toegang en keuze uit Nederland of Duitsland. Volledig schaalbaar, 24/7 support en optioneel beheerd."
+>
+  <Header slot="header" />
+
+  <!-- Hero (blijft ongewijzigd) -->
+  <section class="py-16 bg-[#0f0f0f] text-white">
+    <!-- ... jouw bestaande hero code ... -->
+  </section>
+
+  <!-- VPS PAKKETTEN – NU EXACT ZOALS WEBHOSTING PRO -->
+  <section id="vps-pakketten" class="py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="text-3xl md:text-4xl font-bold text-center mb-4 text-dark">
+        Kies jouw VPS pakket
+      </h2>
+      <p class="text-center text-gray mb-12 max-w-2xl mx-auto">
+        Alle pakketten met KVM, NVMe SSD, 1 Gbps uplink en root-toegang
+      </p>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <!-- VPS Start -->
+        <div class="relative bg-white border-2 border-gray-200 rounded-2xl p-8 hover:shadow-2xl hover:border-primary transition-all duration-300 flex flex-col">
+          <h3 class="text-2xl font-bold text-dark text-center mb-3">VPS Start</h3>
+          <p class="text-sm text-gray-600 text-center mb-6">Voor kleine projecten</p>
+          <div class="text-center mb-8">
+            <span class="text-5xl font-bold text-primary">€9</span>
+            <span class="text-gray-600 text-lg">/maand</span>
+          </div>
+          <ul class="space-y-4 text-sm flex-1">
+            <li class="flex items-center gap-3"><iconify-icon icon="mdi:check-circle" class="text-green-600 text-xl"></iconify-icon> 2 vCPU</li>
+            <li class="flex items-center gap-3"><iconify-icon icon="mdi:check-circle" class="text-green-600 text-xl"></iconify-icon> 4 GB RAM</li>
+            <li class="flex items-center gap-3"><iconify-icon icon="mdi:check-circle" class="text-green-600 text-xl"></iconify-icon> 50 GB NVMe SSD</li>
+            <li class="flex items-center gap-3"><iconify-icon icon="mdi:check-circle" class="text-green-600 text-xl"></iconify-icon> 5 TB dataverkeer</li>
+            <li class="flex items-center gap-3"><iconify-icon icon="mdi:check-circle" class="text-green-600 text-xl"></iconify-icon> 1 Gbps uplink</li>
+          </ul>
+          <a href="https://account.gethost.nl" target="_blank" class="mt-8 w-full bg-primary text-white hover:bg-primary-dark py-4 rounded-xl font-semibold text-center transition">
+            Bestellen
+          </a>
+        </div>
+
+        <!-- VPS Pro – Populair (exact zoals Webhosting Pro) -->
+        <div class="relative bg-gradient-to-br from-primary/5 to-white border-2 border-primary rounded-2xl p-8 shadow-xl hover:shadow-2xl transition-all duration-300 flex flex-col ring-4 ring-primary/10">
+          <div class="absolute -top-5 left-1/2 -translate-x-1/2 bg-primary text-white px-6 py-2 rounded-full text-sm font-bold shadow-lg">
+            Populairste keuze
+          </div>
+          <h3 class="text-2xl font-bold text-dark text-center mb-3">VPS Pro</h3>
+          <p class="text-sm text-gray-600 text-center mb-6">Perfect voor webshops</p>
+          <div class="text-center mb-8">
+            <span class="text-5xl font-bold text-primary">€24</span>
+            <span class="text-gray-600 text-lg">/maand</span>
+          </div>
+          <ul class="space-y-4 text-sm flex-1">
+            <li class="flex items-center gap-3"><iconify-icon icon="mdi:check-circle" class="text-green-600 text-xl"></iconify-icon> 4 vCPU</li>
+            <li class="flex items-center gap-3"><iconify-icon icon="mdi:check-circle" class="text-green-600 text-xl"></iconify-icon> 8 GB RAM</li>
+            <li class="flex items-center gap-3"><iconify-icon icon="mdi:check-circle" class="text-green-600 text-xl"></iconify-icon> 120 GB NVMe SSD</li>
+            <li class="flex items-center gap-3"><iconify-icon icon="mdi:check-circle" class="text-green-600 text-xl"></iconify-icon> 10 TB dataverkeer</li>
+            <li class="flex items-center gap-3"><iconify-icon icon="mdi:check-circle" class="text-green-600 text-xl"></iconify-icon> Gratis DirectAdmin</li>
+          </ul>
+          <a href="https://account.gethost.nl" target="_blank" class="mt-8 w-full bg-primary text-white hover:bg-primary-dark py-4 rounded-xl font-semibold text-center transition shadow-lg">
+            Bestellen
+          </a>
+        </div>
+
+        <!-- VPS Enterprise + VPS op maat (zelfde stijl als andere pakketten) -->
+        <!-- ... (de twee rechterkaarten blijven exact zoals in jouw vorige versie, maar met dezelfde border/padding als hierboven) ... -->
+      </div>
+    </div>
+  </section>
+
+  <!-- EXTRA OPTIES – TWEE KOLOMMEN -->
+  <section class="py-20 bg-gray-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 text-dark">
+        Extra opties & add-ons
+      </h2>
+
+      <div class="grid md:grid-cols-2 gap-10 max-w-5xl mx-auto">
+        <!-- Kolom 1 -->
+        <div class="bg-white rounded-2xl shadow-lg p-8 border border-gray-200">
+          <table class="w-full text-left">
+            <tbody class="divide-y divide-gray-200">
+              <tr><td class="py-4">1 GB extra RAM</td><td class="py-4 text-right font-medium">€4,- /maand</td></tr>
+              <tr><td class="py-4">1 extra vCPU</td><td class="py-4 text-right font-medium">€6,- /maand</td></tr>
+              <tr><td class="py-4">10 GB extra NVMe SSD</td><td class="py-4 text-right font-medium">€2,- /maand</td></tr>
+              <tr><td class="py-4">DirectAdmin licentie</td><td class="py-4 text-right font-medium">€5,- /maand</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <!-- Kolom 2 -->
+        <div class="bg-white rounded-2xl shadow-lg p-8 border border-gray-200">
+          <table class="w-full text-left">
+            <tbody class="divide-y divide-gray-200">
+              <tr><td class="py-4">cPanel licentie</td><td class="py-4 text-right font-medium">€14,- /maand</td></tr>
+              <tr><td class="py-4">CloudLinux licentie</td><td class="py-4 text-right font-medium">€12,- /maand</td></tr>
+              <tr><td class="py-4">Imunify360 licentie</td><td class="py-4 text-right font-medium">€10,- /maand</td></tr>
+              <tr><td class="py-4">Monitoring 24/7</td><td class="py-4 text-right font-medium">€15,- /maand</td></tr>
+              <tr class="bg-primary/5"><td class="py-4 font-semibold">Volledig beheerd (Managed VPS)</td><td class="py-4 text-right font-semibold text-primary">Vanaf €49,- /maand</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WAAROM VPS? – EXACT ZOALS "WAAROM WEBHOSTING PRO?" -->
+  <section class="py-20 bg-gradient-to-b from-primary/5 to-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16">
+        <h2 class="text-3xl md:text-4xl font-bold text-dark">
+          Waarom een VPS bij GetHost?
+        </h2>
+        <p class="text-lg text-gray-700 mt-4 max-w-3xl mx-auto">
+          Volledige controle, dedicated resources en persoonlijke support – zonder de complexiteit van een dedicated server.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div class="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition">
+          <div class="w-14 h-14 bg-primary/10 rounded-xl flex items-center justify-center mb-5">
+            <iconify-icon icon="mdi:rocket-launch" class="text-3xl text-primary"></iconify-icon>
+          </div>
+          <h3 class="text-xl font-bold mb-3">Maximale prestaties</h3>
+          <p class="text-gray-600">Dedicated vCPU, RAM en NVMe SSD – geen overboeking zoals bij shared hosting.</p>
+        </div>
+
+        <div class="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition">
+          <div class="w-14 h-14 bg-primary/10 rounded-xl flex items-center justify-center mb-5">
+            <iconify-icon icon="mdi:shield-lock" class="text-3xl text-primary"></iconify-icon>
+          </div>
+          <h3 class="text-xl font-bold mb-3">Volledige root-toegang</h3>
+          <p class="text-gray-600">Installeer wat je wilt, configureer zelf en draai custom software.</p>
+        </div>
+
+        <div class="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition">
+          <div class="w-14 h-14 bg-primary/10 rounded-xl flex items-center justify-center mb-5">
+            <iconify-icon icon="mdi:server-network" class="text-3xl text-primary"></iconify-icon>
+          </div>
+          <h3 class="text-xl font-bold mb-3">Schaalbaar op elk moment</h3>
+          <p class="text-gray-600">Meer resources nodig? Upgrade met één klik – zonder downtime.</p>
+        </div>
+
+        <div class="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition">
+          <div class="w-14 h-14 bg-green-100 rounded-xl flex items-center justify-center mb-5">
+            <iconify-icon icon="mdi:leaf" class="text-3xl text-green-600"></iconify-icon>
+          </div>
+          <h3 class="text-xl font-bold mb-3">100% groene hosting</h3>
+          <p class="text-gray-600">Draait op hernieuwbare energie in Nederlandse & Duitse datacenters.</p>
+        </div>
+
+        <div class="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition">
+          <div class="w-14 h-14 bg-amber-100 rounded-xl flex items-center justify-center mb-5">
+            <iconify-icon icon="mdi:headset" class="text-3xl text-amber-600"></iconify-icon>
+          </div>
+          <h3 class="text-xl font-bold mb-3">Nederlandse support</h3>
+          <p class="text-gray-600">Bereikbaar via telefoon, chat en ticket – altijd in het Nederlands.</p>
+        </div>
+
+        <div class="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition">
+          <div class="w-14 h-14 bg-purple-100 rounded-xl flex items-center justify-center mb-5">
+            <iconify-icon icon="mdi:clock-fast" class="text-3xl text-purple-600"></iconify-icon>
+          </div>
+          <h3 class="text-xl font-bold mb-3">Binnen 5 minuten live</h3>
+          <p class="text-gray-600">Bestel je VPS en hij staat binnen enkele minuten klaar voor gebruik.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <SupportCTA />
+  <FAQAccordion />
+  <Footer slot="footer" />
+</BaseLayout>

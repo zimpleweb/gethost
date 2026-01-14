@@ -1,0 +1,36 @@
+---
+// src/components/Diensten.astro
+import Card from './ui/Card.astro';
+---
+
+<!-- DIENSTEN – GEEN OVERLAP, NETJES ONDER HERO -->
+<section class="py-16 bg-white">
+  <div class="max-w-7xl mx-auto px-4">
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+      <Card
+        title="Domeinnamen"
+        description="Registreer .nl, .com of .eu vanaf €9,99 per jaar met gratis DNS-beheer."
+        icon="mdi:earth"
+        link="/domeinnamen"
+      />
+      <Card
+        title="Webhosting"
+        description="Shared hosting met cPanel, 1-click installs en 99.9% uptime garantie."
+        icon="mdi:web"
+        link="/webhosting"
+      />
+      <Card
+        title="Webhosting Pro"
+        description="Meer snelheid en resources voor groeiende websites en webshops."
+        icon="mdi:rocket"
+        link="/webhosting-pro"
+      />
+      <Card
+        title="VPS"
+        description="Volledige controle met root-toegang, schaalbare resources en SSD-opslag."
+        icon="mdi:server-network"
+        link="/vps"
+      />
+    </div>
+  </div>
+</section>

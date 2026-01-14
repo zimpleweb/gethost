@@ -1,0 +1,220 @@
+---
+// src/pages/webhosting.astro
+import BaseLayout from '../components/layout/BaseLayout.astro';
+import Header from '../components/layout/Header.astro';
+import Footer from '../components/layout/Footer.astro';
+
+import ProductHero from '../components/ProductHero.astro';
+import Pakketten from '../components/Pakketten.astro';
+import SupportCTA from '../components/SupportCTA.astro';
+import WebhostingFAQ from '../components/WebhostingFAQ.astro';
+---
+
+<BaseLayout 
+  title="Webhosting - Bliksnel, Veilig & Nederlands | GetHost"
+  description="De beste webhosting in Nederland met NVMe SSD, LiteSpeed Enterprise, gratis verhuisservice en échte Nederlandse support. Al vanaf €20/jaar."
+>
+  <Header slot="header" />
+
+  <!-- Product hero: dark background with key benefits and illustration -->
+  <ProductHero />
+
+  <!-- Pricing packages with tabs and detailed feature toggle -->
+  <Pakketten />
+
+  <!-- Three-step onboarding process, styled like Diensten component -->
+  <section class="py-20 bg-gray-50">
+    <div class="max-w-7xl mx-auto px-4">
+      <div class="text-center mb-12">
+        <h2 class="text-4xl md:text-5xl font-bold">Hoe moet ik nu beginnen?</h2>
+        <p class="text-xl text-gray-700 mt-5">In drie eenvoudige stappen heb jij je eigen webhosting + domeinnaam</p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <a href="#pakketten" class="group flex flex-col h-full bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 p-6 text-center">
+          <div class="w-16 h-16 mx-auto mb-6 bg-primary text-white rounded-full flex items-center justify-center text-3xl font-bold">
+            1
+          </div>
+          <h3 class="text-xl font-bold text-dark mb-4">Kies webhosting</h3>
+          <p class="text-gray-700 flex-1 leading-tight text-base">
+            Kies het pakket dat het beste bij jouw online ambities past
+          </p>
+          <span class="mt-6 text-primary font-medium group-hover:underline text-sm">
+            Bekijk pakketten →
+          </span>
+        </a>
+
+        <a href="/domeinnamen" class="group flex flex-col h-full bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 p-6 text-center">
+          <div class="w-16 h-16 mx-auto mb-6 bg-primary text-white rounded-full flex items-center justify-center text-3xl font-bold">
+            2
+          </div>
+          <h3 class="text-xl font-bold text-dark mb-4">Kies je domeinnaam</h3>
+          <p class="text-gray-700 flex-1 leading-tight text-base">
+            Zoek en registreer eenvoudig je perfecte domeinnaam
+          </p>
+          <span class="mt-6 text-primary font-medium group-hover:underline text-sm">
+            Zoek domeinnaam →
+          </span>
+        </a>
+
+        <div class="group flex flex-col h-full bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 p-6 text-center cursor-default">
+          <div class="w-16 h-16 mx-auto mb-6 bg-primary text-white rounded-full flex items-center justify-center text-3xl font-bold">
+            3
+          </div>
+          <h3 class="text-xl font-bold text-dark mb-4">Start met bouwen!</h3>
+          <p class="text-gray-700 flex-1 leading-tight text-base">
+            Bouw je website of webshop – wij helpen je op weg
+          </p>
+          <span class="mt-6 text-primary font-medium text-sm">
+            Wij staan klaar
+          </span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Security and sustainability section with icon-based visuals -->
+  <section class="py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid lg:grid-cols-2 gap-16 items-center">
+        <!-- Security column -->
+        <div class="text-center lg:text-left order-2 lg:order-1">
+          <div class="w-20 h-20 mx-auto lg:mx-0 mb-8 bg-primary/10 rounded-2xl flex items-center justify-center">
+            <iconify-icon icon="mdi:shield-lock" class="text-5xl text-primary"></iconify-icon>
+          </div>
+          <h3 class="text-3xl font-bold mb-6">Jouw website altijd veilig en bereikbaar</h3>
+          <p class="text-lg text-gray-700 leading-relaxed mb-6">
+            Bij GetHost hoef je je geen zorgen te maken over hackers, dataverlies of downtime. We beschermen jouw webhosting met de modernste technieken die normaal alleen bij grote enterprises worden gebruikt. Dagelijks scannen we automatisch op malware met Imunify360, worden er back-ups gemaakt die je met één klik kunt terugzetten en krijg je standaard een gratis SSL-certificaat zodat al het verkeer versleuteld is.
+          </p>
+          <p class="text-lg text-gray-700 leading-relaxed mb-8">
+            Onze servers staan in streng beveiligde datacenters in Nederland en worden 24/7 proactief bewaakt. Zodra er iets verdachts gebeurt, grijpen we direct in – vaak nog voordat jij iets merkt. Dat is de rust die duizenden klanten al meer dan 20 jaar bij ons ervaren.
+          </p>
+          <a href="/beveiliging" class="inline-block bg-primary text-white hover:bg-primary-dark px-8 py-3 rounded-lg font-semibold transition">
+            Meer over onze beveiliging →
+          </a>
+        </div>
+
+        <!-- Sustainability column -->
+        <div class="text-center lg:text-left order-1 lg:order-2">
+          <div class="w-20 h-20 mx-auto lg:mx-0 mb-8 bg-green-100 rounded-2xl flex items-center justify-center">
+            <iconify-icon icon="mdi:leaf" class="text-5xl text-green-600"></iconify-icon>
+          </div>
+          <h3 class="text-3xl font-bold mb-6">100% groene webhosting</h3>
+          <p class="text-lg text-gray-700 leading-relaxed mb-6">
+            Wij vinden dat een snelle website en een gezonde planeet prima samen gaan. Daarom draaien al onze datacenters op 100% hernieuwbare energie en gebruiken we de nieuwste energie-efficiënte hardware in combinatie met LiteSpeed caching – dat scheelt tot wel 70% energieverbruik ten opzichte van traditionele Apache-servers.
+          </p>
+          <p class="text-lg text-gray-700 leading-relaxed mb-8">
+            En we gaan een stap verder: voor élke nieuwe website die bij ons gehost wordt, planten wij een boom via onze partner One Tree Planted. Zo groeit niet alleen jouw online aanwezigheid, maar ook een echt bos. Dat is hosting waar je trots op kunt zijn.
+          </p>
+          <a href="/groene-hosting" class="inline-block bg-green-600 text-white hover:bg-green-700 px-8 py-3 rounded-lg font-semibold transition">
+            Meer over duurzame hosting →
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Included features grid -->
+  <section class="py-20 bg-gradient-to-b from-primary/5 to-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-12">
+        <h2 class="text-3xl md:text-4xl font-bold">Wat krijg je bij je Webhosting pakket?</h2>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div class="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition">
+          <div class="flex items-start gap-3">
+            <div class="w-10 h-10 rounded-full bg-red-100 flex items-center justify-center flex-shrink-0">
+              <iconify-icon icon="mdi:earth" class="text-red-600 text-xl"></iconify-icon>
+            </div>
+            <div>
+              <h3 class="font-bold text-dark mb-2">Gratis Domeinnaam</h3>
+              <p class="text-sm text-gray leading-relaxed">
+                Het eerste jaar helemaal gratis bij elk hostingpakket. Geldig op populaire extensies zoals .nl, .com, .eu, .be, .net, .org, .info en meer.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition">
+          <div class="flex items-start gap-3">
+            <div class="w-10 h-10 rounded-full bg-green-100 flex items-center justify-center flex-shrink-0">
+              <iconify-icon icon="mdi:email-outline" class="text-green-600 text-xl"></iconify-icon>
+            </div>
+            <div>
+              <h3 class="font-bold text-dark mb-2">Zakelijke E-mail</h3>
+              <p class="text-sm text-gray leading-relaxed">
+                Onbeperkt e-mailadressen aanmaken, professionele webmail (Roundcube/Horde), SpamExperts spamfilter en IMAP/POP3 ondersteuning.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition">
+          <div class="flex items-start gap-3">
+            <div class="w-10 h-10 rounded-full bg-orange-100 flex items-center justify-center flex-shrink-0">
+              <iconify-icon icon="mdi:wrench" class="text-orange-600 text-xl"></iconify-icon>
+            </div>
+            <div>
+              <h3 class="font-bold text-dark mb-2">Installatieservice</h3>
+              <p class="text-sm text-gray leading-relaxed">
+                Wij installeren gratis WordPress, Joomla, Magento of een ander CMS voor je. Inclusief thema- en plugin-installatie op verzoek.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition">
+          <div class="flex items-start gap-3">
+            <div class="w-10 h-10 rounded-full bg-teal-100 flex items-center justify-center flex-shrink-0">
+              <iconify-icon icon="mdi:shield-check" class="text-teal-600 text-xl"></iconify-icon>
+            </div>
+            <div>
+              <h3 class="font-bold text-dark mb-2">Blijheidsgarantie</h3>
+              <p class="text-sm text-gray leading-relaxed">
+                Binnen 30 dagen niet tevreden? Dan krijg je zonder vragen je geld terug. Zo weet je zeker dat je de juiste keuze maakt.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition">
+          <div class="flex items-start gap-3">
+            <div class="w-10 h-10 rounded-full bg-purple-100 flex items-center justify-center flex-shrink-0">
+              <iconify-icon icon="mdi:filter" class="text-purple-600 text-xl"></iconify-icon>
+            </div>
+            <div>
+              <h3 class="font-bold text-dark mb-2">SpamExperts Spamfilter</h3>
+              <p class="text-sm text-gray leading-relaxed">
+                Geavanceerde inkomende en uitgaande spam- en virusfiltering. Jouw inbox blijft schoon en veilig, zonder dat je er omkijken naar hebt.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition">
+          <div class="flex items-start gap-3">
+            <div class="w-10 h-10 rounded-full bg-amber-100 flex items-center justify-center flex-shrink-0">
+              <iconify-icon icon="mdi:truck-fast" class="text-amber-600 text-xl"></iconify-icon>
+            </div>
+            <div>
+              <h3 class="font-bold text-dark mb-2">Gratis Verhuisservice</h3>
+              <p class="text-sm text-gray leading-relaxed">
+                Wij verhuizen jouw volledige website, e-mail en database zonder downtime. Inclusief alle bestanden, databases en instellingen – kosteloos!
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Support call-to-action section -->
+  <SupportCTA />
+
+  <!-- Webhosting-specific FAQ in two columns -->
+  <WebhostingFAQ />
+
+  <!-- Site footer -->
+  <Footer slot="footer" />
+</BaseLayout>

@@ -1,0 +1,258 @@
+---
+// src/pages/domeinnamen.astro
+import BaseLayout from '../components/layout/BaseLayout.astro';
+import Header from '../components/layout/Header.astro';
+import Footer from '../components/layout/Footer.astro';
+import SupportCTA from '../components/SupportCTA.astro';
+import FAQAccordion from '../components/FAQAccordion.astro';
+
+const flagIconsCSS = "https://cdn.jsdelivr.net/gh/lipis/flag-icons@7.3.2/css/flag-icons.min.css";
+
+// Alle domeinextensies
+const allDomains = [
+  { tld: ".nl", priceReg: "€0,48", priceRenew: "€5,69", priceTransfer: "Gratis", flag: "nl", popular: true },
+  { tld: ".com", priceReg: "€7,99", priceRenew: "€19,99", priceTransfer: "€7,99", flag: "us", popular: true },
+  { tld: ".eu", priceReg: "€1,75", priceRenew: "€8,99", priceTransfer: "Gratis", flag: "eu", popular: true },
+  { tld: ".be", priceReg: "€2,99", priceRenew: "€9,99", priceTransfer: "Gratis", flag: "be", popular: true },
+  { tld: ".de", priceReg: "€3,99", priceRenew: "€12,99", priceTransfer: "Gratis", flag: "de", popular: true },
+  { tld: ".online", priceReg: "€0,89", priceRenew: "€52,99", priceTransfer: "€28,95", flag: null, popular: true },
+  { tld: ".shop", priceReg: "€1,49", priceRenew: "€44,99", priceTransfer: "€44,99", flag: null, popular: true },
+  { tld: ".site", priceReg: "€0,89", priceRenew: "€39,59", priceTransfer: "€20,99", flag: null, popular: true },
+  { tld: ".store", priceReg: "€1,29", priceRenew: "€69,99", priceTransfer: "€69,99", flag: null, popular: true },
+  { tld: ".net", priceReg: "€11,99", priceRenew: "€18,99", priceTransfer: "€11,99", flag: "us", popular: true },
+  { tld: ".org", priceReg: "€9,99", priceRenew: "€17,99", priceTransfer: "€9,99", flag: "us" },
+  { tld: ".info", priceReg: "€4,99", priceRenew: "€24,99", priceTransfer: "€24,99", flag: "us" },
+  { tld: ".biz", priceReg: "€12,99", priceRenew: "€22,99", priceTransfer: "€22,99", flag: null },
+  { tld: ".co", priceReg: "€19,99", priceRenew: "€34,99", priceTransfer: "€34,99", flag: null },
+  { tld: ".app", priceReg: "€14,99", priceRenew: "€21,99", priceTransfer: "€21,99", flag: null },
+  { tld: ".dev", priceReg: "€12,99", priceRenew: "€16,99", priceTransfer: "€16,99", flag: null },
+  { tld: ".blog", priceReg: "€5,99", priceRenew: "€34,99", priceTransfer: "€34,99", flag: null },
+  { tld: ".club", priceReg: "€4,99", priceRenew: "€19,99", priceTransfer: "€19,99", flag: null },
+  { tld: ".design", priceReg: "€9,99", priceRenew: "€59,99", priceTransfer: "€59,99", flag: null },
+  { tld: ".xyz", priceReg: "€0,99", priceRenew: "€14,99", priceTransfer: "€14,99", flag: null },
+  { tld: ".me", priceReg: "€6,99", priceRenew: "€24,99", priceTransfer: "€24,99", flag: null },
+  { tld: ".io", priceReg: "€39,99", priceRenew: "€59,99", priceTransfer: "€59,99", flag: null },
+  { tld: ".ai", priceReg: "€79,99", priceRenew: "€119,99", priceTransfer: "€119,99", flag: null },
+  { tld: ".tech", priceReg: "€4,99", priceRenew: "€64,99", priceTransfer: "€64,99", flag: null },
+  { tld: ".pro", priceReg: "€4,99", priceRenew: "€24,99", priceTransfer: "€24,99", flag: null },
+  { tld: ".academy", priceReg: "€14,99", priceRenew: "€39,99", priceTransfer: "€39,99", flag: null },
+  { tld: ".agency", priceReg: "€4,99", priceRenew: "€29,99", priceTransfer: "€29,99", flag: null },
+  { tld: ".expert", priceReg: "€9,99", priceRenew: "€59,99", priceTransfer: "€59,99", flag: null },
+  { tld: ".guru", priceReg: "€4,99", priceRenew: "€39,99", priceTransfer: "€39,99", flag: null },
+  { tld: ".photography", priceReg: "€9,99", priceRenew: "€29,99", priceTransfer: "€29,99", flag: null },
+  { tld: ".studio", priceReg: "€14,99", priceRenew: "€34,99", priceTransfer: "€34,99", flag: null },
+  { tld: ".tv", priceReg: "€29,99", priceRenew: "€44,99", priceTransfer: "€44,99", flag: null },
+  { tld: ".fr", priceReg: "€7,99", priceRenew: "€12,99", priceTransfer: "Gratis", flag: "fr" },
+  { tld: ".it", priceReg: "€8,99", priceRenew: "€14,99", priceTransfer: "Gratis", flag: "it" },
+  { tld: ".es", priceReg: "€6,99", priceRenew: "€12,99", priceTransfer: "Gratis", flag: "es" },
+  { tld: ".co.uk", priceReg: "€5,99", priceRenew: "€11,99", priceTransfer: "Gratis", flag: "gb" },
+  { tld: ".se", priceReg: "€14,99", priceRenew: "€24,99", priceTransfer: "Gratis", flag: "se" },
+  { tld: ".nu", priceReg: "€24,99", priceRenew: "€24,99", priceTransfer: "Gratis", flag: null },
+  { tld: ".am", priceReg: "€39,99", priceRenew: "€59,99", priceTransfer: "€59,99", flag: null },
+  { tld: ".fm", priceReg: "€79,99", priceRenew: "€119,99", priceTransfer: "€119,99", flag: null }
+];
+---
+
+<BaseLayout 
+  title="Domeinnamen vanaf €0,48 | .nl, .com, .eu, 500+ extensies | GetHost"
+  description="Registreer jouw domeinnaam vanaf €0,48 per jaar. Meer dan 500 extensies beschikbaar."
+>
+  <head>
+    <link rel="stylesheet" href={flagIconsCSS} />
+  </head>
+
+  <Header slot="header" />
+
+  <!-- Hero -->
+  <section class="py-16 bg-[#0f0f0f] text-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
+        Domeinnaam kopen<br>
+        <span class="text-primary">vanaf €0,48 per jaar</span>
+      </h1>
+      <p class="text-xl md:text-2xl mb-10">
+        Maak je (online) idee werkelijkheid. Zoek direct jouw perfecte domeinnaam.
+      </p>
+
+      <form action="https://account.gethost.nl/cart.php?a=add&domain=register" method="get" class="max-w-3xl mx-auto">
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+          <input type="text" name="query" placeholder="Is jouw domein nog vrij?" required
+                 class="px-6 py-4 text-lg rounded-l-lg flex-1 focus:outline-none focus:ring-4 focus:ring-primary/50 text-gray-900" />
+          <button type="submit" class="bg-primary text-white px-8 py-4 rounded-r-lg font-semibold text-lg hover:bg-primary-dark transition">
+            Checken
+          </button>
+        </div>
+      </form>
+    </div>
+  </section>
+
+  <!-- Populaire extensies -->
+  <section class="py-16 bg-gray-50">
+    <div class="max-w-7xl mx-auto px-4 text-center">
+      <h2 class="text-3xl md:text-4xl font-bold mb-8">Populaire domeinextensies direct registreren</h2>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-5xl mx-auto">
+        <a href="https://account.gethost.nl/cart.php?a=add&domain=register&query=.com" class="bg-white rounded-2xl shadow-lg p-6 hover:shadow-xl transition text-center">
+          <div class="text-4xl mb-4">.com</div>
+          <div class="text-gray-500 text-sm mb-2">€7,99 eerste jaar</div>
+          <span class="block bg-dark text-white py-3 rounded-lg font-semibold hover:bg-dark/90">Bestel .com</span>
+        </a>
+        <a href="https://account.gethost.nl/cart.php?a=add&domain=register&query=.nl" class="bg-white rounded-2xl shadow-lg p-6 hover:shadow-xl transition text-center border-2 border-primary">
+          <div class="text-4xl mb-4">.nl</div>
+          <div class="text-primary font-bold text-lg">€0,48 eerste jaar</div>
+          <span class="block bg-primary text-white py-3 rounded-lg font-semibold hover:bg-primary-dark">Bestel .nl</span>
+        </a>
+        <a href="https://account.gethost.nl/cart.php?a=add&domain=register&query=.eu" class="bg-white rounded-2xl shadow-lg p-6 hover:shadow-xl transition text-center">
+          <div class="text-4xl mb-4">.eu</div>
+          <div class="text-gray-500 text-sm mb-2">€1,75 eerste jaar</div>
+          <span class="block bg-dark text-white py-3 rounded-lg font-semibold hover:bg-dark/90">Bestel .eu</span>
+        </a>
+        <a href="https://account.gethost.nl/cart.php?a=add&domain=register&query=.be" class="bg-white rounded-2xl shadow-lg p-6 hover:shadow-xl transition text-center">
+          <div class="text-4xl mb-4">.be</div>
+          <div class="text-gray-500 text-sm mb-2">€2,99 eerste jaar</div>
+          <span class="block bg-dark text-white py-3 rounded-lg font-semibold hover:bg-dark/90">Bestel .be</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Prijzentabel met zoeken -->
+  <section class="py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-4">
+      <h2 class="text-3xl md:text-4xl font-bold text-center mb-8">Alle domeinextensies en prijzen</h2>
+
+     <!-- Zoekbalk – transparant met oranje onderlijn bij focus -->
+<div class="max-w-xl mx-auto mb-10">
+  <div class="relative">
+    <input 
+      type="text" 
+      id="domain-search"
+      placeholder="Zoek een extensie (bijv. nl, com, shop...)" 
+      class="w-full px-6 py-4 pl-12 text-lg rounded-xl bg-white/90 backdrop-blur-sm border-2 border-transparent focus:outline-none focus:border-b-primary focus:border-b-4 focus:bg-white transition-all duration-200 placeholder-gray-500 text-gray-900"
+    />
+    <iconify-icon icon="mdi:magnify" class="absolute left-4 top-1/2 -translate-y-1/2 text-2xl text-gray-500 pointer-events-none"></iconify-icon>
+  </div>
+  <p class="text-sm text-gray-600 text-center mt-3" id="search-info">
+    Typ om te filteren
+  </p>
+</div>
+
+      <!-- Tabel -->
+      <div class="overflow-x-auto rounded-xl shadow-lg bg-gray-50">
+        <table class="w-full text-left" id="domain-table">
+          <thead class="bg-dark text-white">
+            <tr>
+              <th class="px-6 py-4">Domeinnaam</th>
+              <th class="px-6 py-4 text-center">Registreren</th>
+              <th class="px-6 py-4 text-center">Verlengen</th>
+              <th class="px-6 py-4 text-center">Verhuizen</th>
+              <th class="px-6 py-4 text-center">Actie</th>
+            </tr>
+          </thead>
+          <tbody>
+            {allDomains.map(domain => (
+              <tr class="border-b hover:bg-gray-50 transition domain-row" data-tld={domain.tld.toLowerCase()} :class="{ 'bg-primary/5': domain.popular }">
+                <td class="px-6 py-5 font-medium">
+                  <span class="flex items-center gap-3">
+                    {domain.flag ? 
+                      <span class={`fi fi-${domain.flag} text-2xl`}></span> : 
+                      <img src="https://www.svgrepo.com/show/163115/world-wide-web.svg" alt="Wereld" class="w-6 h-6" />
+                    }
+                    <span class="text-lg font-semibold">{domain.tld}</span>
+                  </span>
+                </td>
+                <td class="px-6 py-5 text-center">
+                  <span class="font-bold text-lg">{domain.priceReg}</span>
+                  {(domain.priceReg.includes("0,48") || domain.priceReg.includes("1,75")) && 
+                    <span class="block text-xs text-green-600 font-medium">Actie!</span>
+                  }
+                </td>
+                <td class="px-6 py-5 text-center text-gray-600">{domain.priceRenew}</td>
+                <td class="px-6 py-5 text-center text-primary font-medium">{domain.priceTransfer}</td>
+                <td class="px-6 py-5 text-center">
+                  <a href={`https://account.gethost.nl/cart.php?a=add&domain=register&query=${domain.tld}`}
+                     class="inline-block bg-primary text-white px-5 py-2 rounded-lg text-sm font-semibold hover:bg-primary-dark transition">
+                    Bestellen
+                  </a>
+                </td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- Veiligheid & Extra's (zoals op webhosting) -->
+  <section class="py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid lg:grid-cols-2 gap-16 items-center">
+        <!-- Veiligheid -->
+        <div class="text-center lg:text-left order-2 lg:order-1">
+          <div class="w-20 h-20 mx-auto lg:mx-0 mb-8 bg-primary/10 rounded-2xl flex items-center justify-center">
+            <iconify-icon icon="mdi:shield-lock" class="text-5xl text-primary"></iconify-icon>
+          </div>
+          <h3 class="text-3xl font-bold mb-6">Jouw domeinnaam altijd veilig</h3>
+          <p class="text-lg text-gray-700 leading-relaxed mb-6">
+            Alle domeinnamen worden beschermd met gratis DNSSEC, privacy-bescherming (WHOIS privacy) en een vergrendeling tegen ongewenste overdracht. Zo blijft jouw domein van jou – zonder extra kosten.
+          </p>
+          <p class="text-lg text-gray-700 leading-relaxed mb-8">
+            Verhuizen? Dat doen wij gratis en zonder downtime. Je krijgt direct toegang tot ons gebruiksvriendelijke DNS-beheer met ondersteuning voor TXT, MX, CNAME, A-records en meer.
+          </p>
+          <a href="/domein-beveiliging" class="inline-block bg-primary text-white hover:bg-primary-dark px-8 py-3 rounded-lg font-semibold transition">
+            Meer over domeinbeveiliging →
+          </a>
+        </div>
+
+        <!-- Extra voordelen -->
+        <div class="text-center lg:text-left order-1 lg:order-2">
+          <div class="w-20 h-20 mx-auto lg:mx-0 mb-8 bg-green-100 rounded-2xl flex items-center justify-center">
+            <iconify-icon icon="mdi:lightning-bolt" class="text-5xl text-green-600"></iconify-icon>
+          </div>
+          <h3 class="text-3xl font-bold mb-6">Alles inbegrepen, geen verrassingen</h3>
+          <p class="text-lg text-gray-700 leading-relaxed mb-6">
+            Bij elke domeinregistratie zit standaard inbegrepen: gratis DNS-beheer, e-mail forwarding (10 adressen), gratis verhuizing, WHOIS privacy (waar mogelijk) en 24/7 support uit Nederland.
+          </p>
+          <p class="text-lg text-gray-700 leading-relaxed mb-8">
+            Geen verborgen kosten, geen add-ons nodig. Kies gewoon jouw domeinnaam en je bent klaar om online te gaan – met de zekerheid van een betrouwbare partner sinds 2004.
+          </p>
+          <a href="/klantenservice" class="inline-block bg-green-600 text-white hover:bg-green-700 px-8 py-3 rounded-lg font-semibold transition">
+            Vragen? Wij helpen je →
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <SupportCTA />
+  <FAQAccordion />
+
+  <Footer slot="footer" />
+</BaseLayout>
+
+<!-- Dynamisch zoeken – vanilla JS -->
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const input = document.getElementById('domain-search');
+    const rows = document.querySelectorAll('.domain-row');
+    const info = document.getElementById('search-info');
+
+    input.addEventListener('input', (e) => {
+      const query = e.target.value.toLowerCase().trim();
+      let visible = 0;
+
+      rows.forEach(row => {
+        const tld = row.dataset.tld;
+        if (!query || tld.includes(query)) {
+          row.style.display = '';
+          visible++;
+        } else {
+          row.style.display = 'none';
+        }
+      });
+
+      info.textContent = query 
+        ? `Gefilterd op "${query}" – ${visible} resultaat(s)`
+        : 'Typ om te filteren';
+    });
+  });
+</script>
