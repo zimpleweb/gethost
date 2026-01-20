@@ -1,0 +1,56 @@
+---
+// src/components/nav/SupportDropdown.astro
+---
+
+<div class="relative group">
+  <a
+    href="/klantenservice"
+    class="text-dark hover:text-primary font-medium text-base transition-colors flex items-center gap-1"
+  >
+    Support
+    <iconify-icon icon="mdi:chevron-down" class="text-xs transition-transform duration-300 group-hover:rotate-180"></iconify-icon>
+  </a>
+
+  <!-- Hover bridge -->
+  <div class="absolute inset-x-0 top-full h-2 bg-transparent"></div>
+
+  <!-- Dropdown -->
+  <div
+    class="absolute top-[calc(100%+8px)] left-0 w-96 bg-white rounded-lg shadow-xl border border-gray-200
+           opacity-0 invisible pointer-events-none
+           group-hover:opacity-100 group-hover:visible group-hover:pointer-events-auto
+           transition-all duration-200"
+  >
+    <div class="p-5 space-y-5">
+      <div class="grid grid-cols-2 gap-4">
+        <a href="tel:0612345678" class="flex items-center gap-3 p-3 rounded hover:bg-gray-50 transition">
+          <iconify-icon icon="mdi:phone" class="text-primary text-xl"></iconify-icon>
+          <span class="font-medium">06 12 34 56 78</span>
+        </a>
+        <a href="https://wa.me/31612345678" target="_blank" class="flex items-center gap-3 p-3 rounded hover:bg-gray-50 transition">
+          <iconify-icon icon="mdi:whatsapp" class="text-primary text-xl"></iconify-icon>
+          <span class="font-medium">WhatsApp</span>
+        </a>
+        <a href="mailto:info@gethost.nl" class="flex items-center gap-3 p-3 rounded hover:bg-gray-50 transition">
+          <iconify-icon icon="mdi:email" class="text-primary text-xl"></iconify-icon>
+          <span class="font-medium">info@gethost.nl</span>
+        </a>
+        <a href="https://t.me/GetHostSupport" target="_blank" class="flex items-center gap-3 p-3 rounded hover:bg-gray-50 transition">
+          <iconify-icon icon="mdi:send" class="text-primary text-xl"></iconify-icon>
+          <span class="font-medium">Telegram</span>
+        </a>
+      </div>
+
+      <!-- Wijziging: Veelgestelde vragen → Kennisbank -->
+      <a href="/kennisbank" class="block w-full text-center bg-primary text-white hover:bg-primary-dark py-3 px-4 rounded-lg font-medium transition">
+        Kennisbank
+      </a>
+
+      <!-- Openingstijden statisch (onderaan) -->
+      <div class="text-center border-t border-gray-200 pt-4 text-xs text-gray-600">
+        <p>Maandag t/m vrijdag van 09:00 - 17:00</p>
+        <p class="text-gray-500">m.u.v. Nederlandse feestdagen</p>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,51 @@
+---
+// src/components/nav/NavItems.astro
+import { diensten, rechts } from '../../data/navigation';
+import SupportDropdown from './SupportDropdown.astro';
+---
+
+<div class="flex items-center space-x-8 leading-none">
+  <!-- Alle items nu in één doorlopende groep: diensten + rechts -->
+  {diensten.map(item => (
+    <a
+      href={item.href}
+      class="text-dark hover:text-primary font-medium text-base transition-colors duration-200"
+    >
+      {item.name}
+    </a>
+  ))}
+
+  {rechts.map(item => (
+    <a
+      href={item.href}
+      class="text-dark hover:text-primary font-medium text-base transition-colors duration-200"
+    >
+      {item.name}
+    </a>
+  ))}
+
+  <SupportDropdown />
+
+  <!-- Oranje iconen (25% kleiner) -->
+  <div class="flex items-center space-x-[5px]">
+    <a
+      href="https://account.gethost.nl"
+      target="_blank"
+      rel="noopener"
+      class="flex items-center justify-center w-9 h-9 rounded-full bg-primary text-white hover:bg-primary-dark transition-all duration-200 shadow-sm hover:shadow-md"
+      title="Mijn account"
+      aria-label="Mijn account openen"
+    >
+      <iconify-icon icon="mdi:account" class="text-xl" aria-hidden="true" />
+    </a>
+
+    <a
+      href="/winkelwagen"
+      class="relative flex items-center justify-center w-9 h-9 rounded-full bg-primary text-white hover:bg-primary-dark transition-all duration-200 shadow-sm hover:shadow-md"
+      title="Winkelwagen"
+      aria-label="Winkelwagen bekijken"
+    >
+      <iconify-icon icon="mdi:cart" class="text-xl" aria-hidden="true" />
+    </a>
+  </div>
+</div>

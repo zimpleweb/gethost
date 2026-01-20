@@ -1,19 +1,27 @@
 ---
 // src/components/HomeHero.astro
---- 
-
-<!-- Hero section for the homepage: dark background with value proposition and service overview -->
-<section class="py-16 bg-[#0f0f0f] text-white">
-  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    <div class="grid lg:grid-cols-2 gap-12 items-center">
-      <!-- Left column: main messaging and benefits -->
-      <div>
+---
+<!-- Hero section for the homepage: dark gradient overlay op afbeelding met fade-effect (links donker, rechts zichtbaar) -->
+<section class="py-16 relative overflow-hidden bg-[#0f0f0f] text-white"
+  style="
+    background-image: 
+      linear-gradient(to right, rgba(15,15,15,0.95) 0%, rgba(15,15,15,0.95) 40%, rgba(15,15,15,0.5) 70%, rgba(15,15,15,0.3) 100%),
+      url('https://images.unsplash.com/photo-1497366216548-37526070297c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  ">
+  <div class="absolute inset-0 bg-[#0f0f0f]/20 backdrop-blur-sm"></div> <!-- Extra subtiele blur voor text leesbaarheid -->
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+    <div class="grid lg:grid-cols-12 gap-12 items-center">
+      <!-- Left column: main messaging and benefits – breder -->
+      <div class="lg:col-span-8 lg:pr-12">
         <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
           Alles-in-één oplossing<br>
           <span class="text-primary">voor jouw website</span>
         </h1>
         <p class="text-lg md:text-xl text-gray-300 mb-8">
-          Ervaar onze snelle, veilige webhosting met meer dan 20 jaar ervaring. 
+          Ervaar onze snelle, veilige webhosting met meer dan 20 jaar ervaring.
           Alles is inbegrepen: e-mail, SSL, back-ups, installatiehulp en persoonlijke Nederlandse support.
         </p>
         <ul class="space-y-4 text-lg mb-10">
@@ -44,45 +52,8 @@
         </div>
       </div>
 
-      <!-- Right column: service overview cards (replaces old Stats component) -->
-      <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
-        <div class="flex items-start gap-4 bg-white/10 backdrop-blur rounded-xl p-5 border border-white/20">
-          <div class="w-12 h-12 bg-primary/20 rounded-lg flex items-center justify-center">
-            <iconify-icon icon="mdi:earth" class="text-2xl text-primary"></iconify-icon>
-          </div>
-          <div>
-            <h3 class="font-semibold text-white">Domeinnamen</h3>
-            <p class="text-sm text-gray-300 mt-1">Vanaf €9,99 per jaar met gratis DNS-beheer.</p>
-          </div>
-        </div>
-        <div class="flex items-start gap-4 bg-white/10 backdrop-blur rounded-xl p-5 border border-white/20">
-          <div class="w-12 h-12 bg-primary/20 rounded-lg flex items-center justify-center">
-            <iconify-icon icon="mdi:web" class="text-2xl text-primary"></iconify-icon>
-          </div>
-          <div>
-            <h3 class="font-semibold text-white">Webhosting</h3>
-            <p class="text-sm text-gray-300 mt-1">Shared hosting met cPanel & 99.9% uptime.</p>
-          </div>
-        </div>
-        <div class="flex items-start gap-4 bg-white/10 backdrop-blur rounded-xl p-5 border border-white/20">
-          <div class="w-12 h-12 bg-primary/20 rounded-lg flex items-center justify-center">
-            <iconify-icon icon="mdi:rocket" class="text-2xl text-primary"></iconify-icon>
-          </div>
-          <div>
-            <h3 class="font-semibold text-white">Webhosting Pro</h3>
-            <p class="text-sm text-gray-300 mt-1">Meer snelheid voor groeiende websites.</p>
-          </div>
-        </div>
-        <div class="flex items-start gap-4 bg-white/10 backdrop-blur rounded-xl p-5 border border-white/20">
-          <div class="w-12 h-12 bg-primary/20 rounded-lg flex items-center justify-center">
-            <iconify-icon icon="mdi:server-network" class="text-2xl text-primary"></iconify-icon>
-          </div>
-          <div>
-            <h3 class="font-semibold text-white">VPS</h3>
-            <p class="text-sm text-gray-300 mt-1">Volledige controle met root-toegang.</p>
-          </div>
-        </div>
-      </div>
+      <!-- Rechterkolom volledig verwijderd -->
+
     </div>
   </div>
 </section>
