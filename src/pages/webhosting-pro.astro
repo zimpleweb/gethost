@@ -3,147 +3,37 @@
 import BaseLayout from '../components/layout/BaseLayout.astro';
 import Header from '../components/layout/Header.astro';
 import Footer from '../components/layout/Footer.astro';
-import FAQAccordion from '../components/FAQAccordion.astro';
-import ProductHero from '../components/ProductHero.astro';
-import Pakketten from '../components/Pakketten.astro';
 import SupportCTA from '../components/SupportCTA.astro';
+import WebhostingFAQ from '../components/WebhostingFAQ.astro'; // of ProFAQ.astro als je aparte maakt
+
+import WebhostingStart from '../components/WebhostingStart.astro';
+import ProHero from '../components/ProHero.astro';
+import ProWhy from '../components/ProWhy.astro';
+import ProText from '../components/ProText.astro';
+import Pakketten from '../components/Pakketten.astro';
 ---
 
-<BaseLayout 
-  title="Webhosting Pro - Meer snelheid & ruimte voor webshops | GetHost"
-  description="Krachtige webhosting voor groeiende websites en webshops. LiteSpeed Enterprise, meer resources, NVMe SSD en persoonlijke support – zonder de complexiteit van een VPS."
+<BaseLayout
+  title="Webhosting Pro - Ultieme Snelheid & Kracht | GetHost"
+  description="Webhosting Pro met NVMe SSD, LiteSpeed Enterprise, onbeperkt verkeer, prioriteit support en gratis verhuisservice. De beste keuze voor veeleisende websites."
 >
   <Header slot="header" />
 
-  <!-- Product hero – aangepast voor Webhosting Pro -->
-  <section class="py-16 bg-[#0f0f0f] text-white">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="grid lg:grid-cols-3 gap-12 items-center">
-        <div class="lg:col-span-2">
-          <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
-            Webhosting Pro<br>
-            <span class="text-primary">Voor webshops & groeiende websites</span>
-          </h1>
-          <p class="text-lg md:text-xl text-gray-300 mb-8">
-            Meer snelheid, meer ruimte en meer resources dan standaard hosting – maar zonder de complexiteit van een VPS. 
-            Perfect voor WooCommerce, Magento, grote WordPress-sites en drukbezochte platforms.
-          </p>
-          <ul class="space-y-4 text-lg mb-10">
-            <li class="flex items-center gap-3">
-              <iconify-icon icon="mdi:check-circle" class="text-green-500 text-2xl flex-shrink-0"></iconify-icon>
-              <span><strong>LiteSpeed Enterprise</strong> + Redis caching</span>
-            </li>
-            <li class="flex items-center gap-3">
-              <iconify-icon icon="mdi:check-circle" class="text-green-500 text-2xl flex-shrink-0"></iconify-icon>
-              <span>Tot <strong>10× meer resources</strong> dan standaard hosting</span>
-            </li>
-            <li class="flex items-center gap-3">
-              <iconify-icon icon="mdi:check-circle" class="text-green-500 text-2xl flex-shrink-0"></iconify-icon>
-              <span><strong>Gratis verhuisservice</strong> zonder downtime</span>
-            </li>
-            <li class="flex items-center gap-3">
-              <iconify-icon icon="mdi:check-circle" class="text-green-500 text-2xl flex-shrink-0"></iconify-icon>
-              <span>Eenvoudig beheer via cPanel – <strong>geen serverkennis nodig</strong></span>
-            </li>
-          </ul>
-          <div class="flex flex-col sm:flex-row gap-4">
-            <a href="#pakketten" class="bg-primary text-white hover:bg-primary-dark px-7 py-3.5 rounded-lg font-semibold text-base transition shadow-lg text-center">
-              Bekijk Pro-pakketten
-            </a>
-            <a href="/klantenservice" class="bg-white text-primary hover:bg-gray-100 px-7 py-3.5 rounded-lg font-semibold text-base transition shadow-lg text-center">
-              Gratis verhuizing aanvragen
-            </a>
-          </div>
-        </div>
-        <div class="flex justify-center">
-          <img src="/images/webhosting-pro-illustration.webp" alt="Webhosting Pro voor webshops" class="w-full max-w-md rounded-2xl shadow-2xl" />
-        </div>
-      </div>
-    </div>
-  </section>
+  <ProHero />
 
-  <!-- Pakketten – Pro-tab standaard actief -->
-  <Pakketten activeTab="pro" />
+  <!-- Pricing packages met tabs en detailed feature toggle -->
+  <Pakketten />
 
-<!-- Waarom Webhosting Pro? – koppen zoals op index + kleinere iconen -->
-<section class="py-20 bg-gray-50">
-  <div class="max-w-7xl mx-auto px-4">
-    <div class="text-center mb-12">
-      <h2 class="text-4xl md:text-5xl font-bold">Waarom Webhosting Pro?</h2>
-      <p class="text-xl text-gray-700 mt-5">De perfecte tussenstap tussen shared hosting en een VPS</p>
-    </div>
+    <!-- Drie-stappen onboarding -->
+  <WebhostingStart />
 
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-      <!-- Reden 1 -->
-      <div class="group flex flex-col h-full bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 p-8 text-center">
-        <div class="w-16 h-16 mx-auto mb-6 bg-primary/10 rounded-2xl flex items-center justify-center">
-          <iconify-icon icon="mdi:rocket-launch" class="text-4xl text-primary"></iconify-icon>
-        </div>
-        <h3 class="text-2xl font-bold text-dark mb-4">Razendsnel voor webshops</h3>
-        <p class="text-gray-700 leading-relaxed text-base">
-          LiteSpeed Enterprise + Redis + NVMe SSD = tot 20× sneller dan standaard hosting. Klanten haken niet meer af bij het afrekenen.
-        </p>
-      </div>
 
-      <!-- Reden 2 -->
-      <div class="group flex flex-col h-full bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 p-8 text-center">
-        <div class="w-16 h-16 mx-auto mb-6 bg-green-100 rounded-2xl flex items-center justify-center">
-          <iconify-icon icon="mdi:server" class="text-4xl text-green-600"></iconify-icon>
-        </div>
-        <h3 class="text-2xl font-bold text-dark mb-4">Meer resources, geen limieten</h3>
-        <p class="text-gray-700 leading-relaxed text-base">
-          Tot 10× meer CPU, RAM en gelijktijdige processen. Ideaal voor WooCommerce, Magento of drukbezochte sites.
-        </p>
-      </div>
+  <ProText />
 
-      <!-- Reden 3 -->
-      <div class="group flex flex-col h-full bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 p-8 text-center">
-        <div class="w-16 h-16 mx-auto mb-6 bg-blue-100 rounded-2xl flex items-center justify-center">
-          <iconify-icon icon="mdi:cog" class="text-4xl text-blue-600"></iconify-icon>
-        </div>
-        <h3 class="text-2xl font-bold text-dark mb-4">Makkelijker dan een VPS</h3>
-        <p class="text-gray-700 leading-relaxed text-base">
-          Geen serverbeheer, geen updates, geen patches. Gewoon inloggen in cPanel en alles werkt – maar dan sneller en krachtiger.
-        </p>
-      </div>
-    </div>
-  </div>
-</section>
-
-  <!-- Veiligheid & Duurzaamheid -->
-  <section class="py-20 bg-white">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="grid lg:grid-cols-2 gap-16 items-center">
-        <div class="text-center lg:text-left">
-          <div class="w-20 h-20 mx-auto lg:mx-0 mb-8 bg-primary/10 rounded-2xl flex items-center justify-center">
-            <iconify-icon icon="mdi:shield-lock" class="text-5xl text-primary"></iconify-icon>
-          </div>
-          <h3 class="text-3xl font-bold mb-6">Enterprise-grade beveiliging</h3>
-          <p class="text-lg text-gray-700 leading-relaxed mb-6">
-            Imunify360, dagelijkse back-ups (30 dagen bewaard), gratis SSL, malware-scans en proactieve monitoring. Jouw webshop is altijd veilig – ook bij piekdrukte.
-          </p>
-          <a href="/beveiliging" class="inline-block bg-primary text-white hover:bg-primary-dark px-8 py-3 rounded-lg font-semibold transition">
-            Meer over beveiliging
-          </a>
-        </div>
-        <div class="text-center lg:text-left">
-          <div class="w-20 h-20 mx-auto lg:mx-0 mb-8 bg-green-100 rounded-2xl flex items-center justify-center">
-            <iconify-icon icon="mdi:leaf" class="text-5xl text-green-600"></iconify-icon>
-          </div>
-          <h3 class="text-3xl font-bold mb-6">100% groene hosting</h3>
-          <p class="text-lg text-gray-700 leading-relaxed mb-6">
-            Onze datacenters draaien op 100% hernieuwbare energie. En voor elke Pro-klant planten we een boom – want een snelle webshop kan ook duurzaam zijn.
-          </p>
-          <a href="/groene-hosting" class="inline-block bg-green-600 text-white hover:bg-green-700 px-8 py-3 rounded-lg font-semibold transition">
-            Meer over duurzaamheid
-          </a>
-        </div>
-      </div>
-    </div>
-  </section>
+  <ProWhy />
 
   <SupportCTA />
-  <FAQAccordion />
+  <WebhostingFAQ />
 
   <Footer slot="footer" />
 </BaseLayout>

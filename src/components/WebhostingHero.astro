@@ -1,0 +1,95 @@
+---
+// src/components/WebhostingHero.astro
+---
+
+<section class="relative bg-[#0f0f0f] text-white py-16 md:py-20 overflow-hidden">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="grid lg:grid-cols-2 gap-12 items-center">
+      <!-- Linker kolom: tekst + knoppen -->
+      <div>
+        <div class="inline-flex items-center gap-2 mb-6">
+          <div class="flex">
+            <iconify-icon icon="mdi:star" class="text-yellow-400 text-xl" />
+            <iconify-icon icon="mdi:star" class="text-yellow-400 text-xl" />
+            <iconify-icon icon="mdi:star" class="text-yellow-400 text-xl" />
+            <iconify-icon icon="mdi:star" class="text-yellow-400 text-xl" />
+            <iconify-icon icon="mdi:star-half-full" class="text-yellow-400 text-xl" />
+          </div>
+          <span class="text-sm font-medium">4.9/5 – 1737+ beoordelingen</span>
+        </div>
+
+        <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-6">
+          Een <span class="text-primary">razendsnelle</span><br>
+          website, <span class="text-primary">zonder gedoe</span>.
+        </h1>
+
+        <p class="text-lg md:text-xl text-gray-300 mb-8 max-w-2xl">
+          Laat het zware werk aan ons over. Wij verhuizen je site <strong>gratis</strong> of zetten je nieuwe website direct online op onze premium servers. Alles geregeld.
+        </p>
+
+        <div class="flex flex-col sm:flex-row gap-4 mb-10">
+          <a
+            href="#pakketten"
+            class="inline-flex items-center justify-center bg-primary text-white px-8 py-4 rounded-full font-semibold text-lg hover:bg-primary-dark transition shadow-lg"
+          >
+            Bekijk pakketten ↓
+          </a>
+          <a
+            href="/verhuisservice"
+            class="inline-flex items-center justify-center border-2 border-primary text-primary px-8 py-4 rounded-full font-semibold text-lg hover:bg-primary/10 transition"
+          >
+            Gratis verhuisservice
+          </a>
+        </div>
+
+        <div class="flex items-center gap-2 text-sm text-gray-400">
+          <iconify-icon icon="mdi:shield-check" class="text-green-500 text-xl" />
+          <span>30 dagen risicoloos proberen</span>
+        </div>
+      </div>
+
+      <!-- Rechter kolom: stats + afbeeldingen / domeinen -->
+      <div class="relative hidden lg:block">
+        <!-- Reviews bubble -->
+        <div class="absolute top-0 right-0 bg-white/10 backdrop-blur-md rounded-2xl p-5 shadow-xl border border-white/10">
+          <div class="flex items-center gap-3 mb-2">
+            <div class="bg-orange-500 text-white w-10 h-10 rounded-full flex items-center justify-center font-bold">
+              keurig
+            </div>
+            <div>
+              <div class="text-sm font-medium">www.keurigonline.nl</div>
+              <div class="flex text-yellow-400 text-sm">
+                ★★★★☆
+              </div>
+            </div>
+          </div>
+          <div class="text-xs text-gray-300">4.9/5 – 1737+ beoordelingen</div>
+        </div>
+
+        <!-- Stats blokje -->
+        <div class="absolute bottom-10 left-10 bg-white/10 backdrop-blur-md rounded-2xl p-6 shadow-xl border border-white/10">
+          <div class="text-3xl font-bold mb-1">4.892</div>
+          <div class="text-sm text-green-400 flex items-center gap-1">
+            <iconify-icon icon="mdi:trending-up" />
+            +48% bezoekers
+          </div>
+        </div>
+
+        <!-- Domein hints / sites illustratie -->
+        <div class="relative">
+          <div class="absolute inset-0 flex flex-col justify-center items-center gap-4 opacity-80">
+            <div class="text-2xl font-bold text-primary">.nl</div>
+            <div class="text-2xl font-bold text-primary">.com</div>
+            <div class="text-2xl font-bold text-primary">.online</div>
+          </div>
+          <img
+            src="/images/webhosting-hero-bg.webp"
+            alt="Websites & domeinen"
+            class="w-full rounded-2xl shadow-2xl opacity-40"
+            loading="lazy"
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

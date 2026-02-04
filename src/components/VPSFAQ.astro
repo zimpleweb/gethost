@@ -1,0 +1,69 @@
+---
+const faqs = [
+  {
+    question: "Wat is het verschil tussen een VPS en shared hosting?",
+    answer: "Bij shared hosting deel je server-resources met vele anderen, wat kan leiden tot tragere prestaties bij pieken. Een VPS geeft je dedicated vCPU, RAM en opslag (KVM-virtualisatie), root-toegang en volledige isolatie — ideaal voor veeleisende sites, apps of maatwerk software."
+  },
+  {
+    question: "Heb ik root-toegang op mijn VPS?",
+    answer: "Ja, volledige root-toegang is standaard inbegrepen. Je kunt zelf OS installeren, software configureren, firewalls beheren, enz. Je krijgt login-gegevens direct na activatie."
+  },
+  {
+    question: "Kan ik mijn VPS zelf upgraden?",
+    answer: "Ja, via het controlepaneel kun je op elk moment extra RAM, CPU of opslag bijbestellen — zonder downtime en direct actief. Downgraden kan ook, maar neem even contact op als je resources wilt verminderen."
+  },
+  {
+    question: "Welke besturingssystemen zijn beschikbaar?",
+    answer: "Standaard: Ubuntu 22.04/24.04, Debian 11/12, AlmaLinux 8/9, Rocky Linux 8/9, Windows Server 2019/2022 (extra licentie). Andere distro's kun je zelf installeren via ISO in het controlepaneel."
+  },
+  {
+    question: "Zit er DirectAdmin of cPanel bij?",
+    answer: "Nee, standaard niet inbegrepen (bespaart kosten). Je kunt DirectAdmin (€5/maand) of cPanel (€14/maand) toevoegen bij bestelling of later. Beide zijn optioneel — je kunt ook alles handmatig configureren (nginx/Apache)."
+  },
+  {
+    question: "Wat als ik hulp nodig heb met installatie/beheer?",
+    answer: "We bieden 24/7 Nederlandse support via ticket, chat en telefoon. Voor complexere setups kun je kiezen voor Managed VPS (vanaf €49/maand) waarbij wij OS-updates, beveiliging, backups en optimalisaties verzorgen."
+  },
+  {
+    question: "Waar staan de servers?",
+    answer: "Onze VPS'en draaien in hoogwaardige datacenters in Nederland (Amsterdam) en Duitsland (Frankfurt/Nürnberg). Je kiest zelf de locatie bij bestelling — lage latency voor .nl/.be bezoekers of juist EU-backup."
+  },
+  {
+    question: "Is er een geld-terug-garantie?",
+    answer: "Ja, 30 dagen niet-goed-geld-terug op alle VPS pakketten (exclusief licenties en maatwerk). Neem contact op binnen 30 dagen na activatie en we regelen restitutie minus eventuele setup-kosten."
+  }
+];
+---
+
+<section class="py-20 md:py-28 bg-white">
+  <div class="container mx-auto px-6 max-w-4xl">
+    <h2 class="text-4xl md:text-5xl font-bold text-center mb-16">
+      Veelgestelde vragen over VPS
+    </h2>
+
+    <div class="space-y-4">
+      {faqs.map(faq => (
+        <details class="group border border-gray-200 rounded-xl overflow-hidden">
+          <summary class="flex justify-between items-center cursor-pointer p-6 font-semibold text-lg hover:bg-gray-50 transition">
+            {faq.question}
+            <span class="transition group-open:rotate-180">
+              <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+              </svg>
+            </span>
+          </summary>
+          <div class="px-6 pb-6 pt-2 text-gray-700">
+            {faq.answer}
+          </div>
+        </details>
+      ))}
+    </div>
+
+    <div class="text-center mt-12">
+      <p class="text-lg mb-6">Nog een vraag over VPS?</p>
+      <a href="/klantenservice" class="inline-block bg-indigo-600 text-white font-semibold px-8 py-4 rounded-lg hover:bg-indigo-700 transition">
+        Neem contact op →
+      </a>
+    </div>
+  </div>
+</section>

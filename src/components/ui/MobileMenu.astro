@@ -2,29 +2,81 @@
 // src/components/ui/MobileMenu.astro
 ---
 
-<button id="menu-btn" class="md:hidden p-2">
+<button id="menu-btn" class="md:hidden p-2 focus:outline-none" aria-label="Open menu">
   <iconify-icon icon="mdi:menu" class="text-2xl text-dark"></iconify-icon>
 </button>
 
-<div id="mobile-menu"
-     class="hidden fixed inset-0 bg-white z-50 pt-20 px-6 overflow-y-auto">
-  <button id="close-btn" class="absolute top-6 right-6">
-    <iconify-icon icon="mdi:close" class="text-3xl text-dark"></iconify-icon>
-  </button>
+<div id="mobile-menu" class="hidden fixed inset-0 z-[9999] bg-white md:hidden overflow-hidden">
+  <div class="flex flex-col h-full">
+    <!-- Bovenaan: sluitknop -->
+    <div class="flex justify-end px-6 pt-6">
+      <button id="close-btn" class="text-4xl text-gray-800 focus:outline-none" aria-label="Sluit menu">
+        <iconify-icon icon="mdi:close"></iconify-icon>
+      </button>
+    </div>
 
-  <nav class="space-y-6 text-lg font-medium">
-    <a href="/" class="block text-dark hover:text-primary">Home</a>
-    <a href="/domeinnamen" class="block text-dark hover:text-primary">Domeinnamen</a>
-    <a href="/webhosting" class="block text-dark hover:text-primary">Webhosting</a>
-    <a href="/webhosting-pro" class="block text-dark hover:text-primary">Pro</a>
-    <a href="/vps" class="block text-dark hover:text-primary">VPS</a>
-    <a href="/klantenservice" class="block text-dark hover:text-primary">Support</a>
-    <a href="https://account.gethost.nl"
-       target="_blank"
-       class="block bg-primary text-white text-center py-3 rounded-lg hover:bg-primary-dark transition">
-      Account
-    </a>
-  </nav>
+    <!-- Navigatie: verticaal gecentreerd -->
+    <div class="flex-1 flex items-center justify-center px-6">
+      <nav class="w-full max-w-md space-y-1">
+        <a href="/" class="flex items-center gap-4 py-4 border-b border-gray-200 hover:text-primary transition-colors">
+          <iconify-icon icon="mdi:home" class="text-2xl text-gray-600" />
+          <span class="text-xl font-medium">Home</span>
+        </a>
+
+        <a href="/domeinnamen" class="flex items-center gap-4 py-4 border-b border-gray-200 hover:text-primary transition-colors">
+          <iconify-icon icon="mdi:earth" class="text-2xl text-gray-600" />
+          <span class="text-xl font-medium">Domeinnamen</span>
+        </a>
+
+        <a href="/webhosting" class="flex items-center gap-4 py-4 border-b border-gray-200 hover:text-primary transition-colors">
+          <iconify-icon icon="mdi:server-network" class="text-2xl text-gray-600" />
+          <span class="text-xl font-medium">Webhosting</span>
+        </a>
+
+        <a href="/webhosting-pro" class="flex items-center gap-4 py-4 border-b border-gray-200 hover:text-primary transition-colors">
+          <iconify-icon icon="mdi:star" class="text-2xl text-gray-600" />
+          <span class="text-xl font-medium">Pro</span>
+        </a>
+
+        <a href="/vps" class="flex items-center gap-4 py-4 border-b border-gray-200 hover:text-primary transition-colors">
+          <iconify-icon icon="mdi:cloud" class="text-2xl text-gray-600" />
+          <span class="text-xl font-medium">VPS</span>
+        </a>
+
+        <a href="/klantenservice" class="flex items-center gap-4 py-4 border-b border-gray-200 hover:text-primary transition-colors">
+          <iconify-icon icon="mdi:headset" class="text-2xl text-gray-600" />
+          <span class="text-xl font-medium">Support</span>
+        </a>
+      </nav>
+    </div>
+
+    <!-- Onderin: Inloggen en Bestellen naast elkaar -->
+    <div class="px-6 pb-10">
+      <div class="flex flex-row gap-4">
+        <a
+          href="https://account.gethost.nl"
+          target="_blank"
+          class="
+            flex-1 text-center py-4 border-2 border-primary text-primary font-semibold rounded-full
+            hover:bg-primary/10 transition text-lg
+          "
+        >
+          Inloggen
+        </a>
+
+        <a
+          href="https://account.gethost.nl/bestellen"
+          target="_blank"
+          class="
+            flex-1 text-center py-4 bg-primary text-white font-semibold rounded-full
+            hover:bg-primary-dark transition shadow-md text-lg
+          "
+        >
+          Bestellen
+        </a>
+      </div>
+    </div>
+  </div>
 </div>
 
 <script>
@@ -32,6 +84,32 @@
   const mobileMenu = document.getElementById('mobile-menu');
   const closeBtn = document.getElementById('close-btn');
 
-  menuBtn?.addEventListener('click', () => mobileMenu?.classList.remove('hidden'));
-  closeBtn?.addEventListener('click', () => mobileMenu?.classList.add('hidden'));
+  if (menuBtn && mobileMenu && closeBtn) {
+    // Open menu
+    menuBtn.addEventListener('click', () => {
+      mobileMenu.classList.remove('hidden');
+      document.body.classList.add('overflow-hidden');
+    });
+
+    // Sluit menu
+    const closeMenu = () => {
+      mobileMenu.classList.add('hidden');
+      document.body.classList.remove('overflow-hidden');
+    };
+
+    closeBtn.addEventListener('click', closeMenu);
+
+    // Sluit ook met Escape-toets
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && !mobileMenu.classList.contains('hidden')) {
+        closeMenu();
+      }
+    });
+  }
 </script>
+
+<style>
+  #mobile-menu:not(.hidden) {
+    display: block;
+  }
+</style>
