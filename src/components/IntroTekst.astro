@@ -1,0 +1,64 @@
+---
+const imageSrc = "/images/speed-comparison-proof.png"; // pas aan naar je eigen afbeelding
+const altText = "Bewijs van razendsnelle hosting bij GetHost";
+---
+
+<section class="py-16 bg-white">
+  <div class="container mx-auto px-6 lg:px-8 max-w-6xl">
+    <div class="grid lg:grid-cols-[2fr_1fr] gap-8 lg:gap-12 items-center">
+
+      <!-- Tekst-kolom: meer ruimte (2/3), font gelijk aan rest project (font-sans) -->
+      <div class="font-sans pl-0 pr-4 lg:pr-8 space-y-5 lg:space-y-6">
+        <h2 class="text-[24px] font-bold leading-tight">
+          Iedereen beweert de snelste te zijn.<br />
+          <span class="text-primary">Bij GetHost hebben we het bewijs.</span>
+        </h2>
+
+        <p class="text-[15px] text-base-content/80">
+          GetHost levert razendsnelle webhosting in Nederland – onafhankelijk getest en bewezen.
+        </p>
+
+        <p class="text-[15px] font-medium">Meer snelheid. Meer bezoekers. Meer conversie.</p>
+
+        <ul class="space-y-3 text-[15px]">
+          <li class="flex items-center gap-3">
+            <span class="text-success text-xl">✓</span>
+            Uitstekende prestaties voor WordPress, WooCommerce en alle moderne sites
+          </li>
+          <li class="flex items-center gap-3">
+            <span class="text-success text-xl">✓</span>
+            Hogere conversie door extreem korte laadtijden
+          </li>
+          <li class="flex items-center gap-3">
+            <span class="text-success text-xl">✓</span>
+            Geoptimaliseerde LiteSpeed servers + eigen caching voor top snelheid
+          </li>
+          <li class="flex items-center gap-3">
+            <span class="text-success text-xl">✓</span>
+            Eigen hardware in Nederlandse datacenters – volledige controle
+          </li>
+          <li class="flex items-center gap-3">
+            <span class="text-success text-xl">✓</span>
+            Supersnelle PHP en database-optimalisaties standaard inbegrepen
+          </li>
+        </ul>
+
+        <p class="text-[13px] text-base-content/60 italic pt-2">
+          Getest en beoordeeld door onafhankelijke bronnen – snelheid waar je op kunt bouwen
+        </p>
+      </div>
+
+      <!-- Afbeelding: kleiner deel (1/3) -->
+      <div class="flex justify-center lg:justify-end">
+        <img
+          src={imageSrc}
+          alt={altText}
+          class="w-full max-w-sm rounded-xl shadow-2xl object-cover"  <!-- max-w-sm i.p.v. lg om beter in 1/3 te passen -->
+          loading="lazy"
+          decoding="async"
+        />
+      </div>
+
+    </div>
+  </div>
+</section>

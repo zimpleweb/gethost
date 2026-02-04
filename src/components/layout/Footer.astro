@@ -1,76 +1,183 @@
 ---
-// src/components/layout/Footer.astro
+const currentYear = new Date().getFullYear();
 ---
 
-<footer class="bg-dark text-white">
-  <!-- Hoofdfooter -->
-  <div class="bg-dark/95 py-12">
-    <div class="max-w-7xl mx-auto px-4 grid grid-cols-1 md:grid-cols-4 gap-8">
-      <!-- Reviews -->
+<footer class="bg-base-200 text-base-content pt-16 pb-12">
+  <div class="container mx-auto px-6 lg:px-8 max-w-7xl">
+
+    <!-- Desktop / tablet: 4 kolommen grid -->
+    <div class="hidden lg:grid lg:grid-cols-4 gap-10 lg:gap-8">
+      <!-- Kolom 1: Alle diensten -->
       <div>
-        <div class="flex items-center gap-2 mb-3">
-          <span class="text-2xl">★★★★★</span>
-          <span class="text-yellow-400 font-bold">4,1 van de 5</span>
+        <h4 class="text-lg font-bold mb-6 text-base-content">Alle diensten</h4>
+        <ul class="space-y-3 text-base-content/80">
+          <li><a href="/domeinnamen" class="hover:text-primary transition">Domeinnaam</a></li>
+          <li><a href="#" class="hover:text-primary transition">Website Builder</a></li>
+          <li><a href="/vps" class="hover:text-primary transition">Virtual Private Server</a></li>
+          <li><a href="#" class="hover:text-primary transition">Dedicated Server</a></li>
+          <li><a href="#" class="hover:text-primary transition">Public Cloud</a></li>
+          <li><a href="#" class="hover:text-primary transition">Microsoft 365</a></li>
+          <li><a href="#" class="hover:text-primary transition">SSL-certificaten</a></li>
+        </ul>
+      </div>
+
+      <!-- Kolom 2: Domeinnaam + Hosting -->
+      <div>
+        <h4 class="text-lg font-bold mb-6 text-base-content">Domeinnaam</h4>
+        <ul class="space-y-3 text-base-content/80 mb-10">
+          <li><a href="/domeinnamen" class="hover:text-primary transition">Domeinnaam registreren</a></li>
+          <li><a href="#" class="hover:text-primary transition">Domeinnaam verhuizen</a></li>
+          <li><a href="#" class="hover:text-primary transition">Tarieven domeinnamen</a></li>
+          <li><a href="#" class="hover:text-primary transition">Nieuwe domeinextensies</a></li>
+        </ul>
+
+        <h4 class="text-lg font-bold mb-6 text-base-content">Hosting</h4>
+        <ul class="space-y-3 text-base-content/80">
+          <li><a href="/webhosting" class="hover:text-primary transition">Webhosting</a></li>
+          <li><a href="/webhosting" class="hover:text-primary transition">WordPress hosting</a></li>
+          <li><a href="#" class="hover:text-primary transition">Reseller hosting</a></li>
+        </ul>
+      </div>
+
+      <!-- Kolom 3: Informatie + Juridisch -->
+      <div>
+        <h4 class="text-lg font-bold mb-6 text-base-content">Informatie</h4>
+        <ul class="space-y-3 text-base-content/80 mb-10">
+          <li><a href="/over-ons" class="hover:text-primary transition">Over ons</a></li>
+          <li><a href="/blog" class="hover:text-primary transition">Blog</a></li>
+          <li><a href="#" class="hover:text-primary transition">Duurzaamheid</a></li>
+          <li><a href="#" class="hover:text-primary transition">Affiliate programma</a></li>
+        </ul>
+
+        <h4 class="text-lg font-bold mb-6 text-base-content">Juridisch</h4>
+        <ul class="space-y-3 text-base-content/80">
+          <li><a href="/privacybeleid" class="hover:text-primary transition">Privacybeleid</a></li>
+          <li><a href="#" class="hover:text-primary transition">Misbruik melden</a></li>
+          <li><a href="/algemene-voorwaarden" class="hover:text-primary transition">Algemene voorwaarden</a></li>
+        </ul>
+      </div>
+
+      <!-- Kolom 4: Ondersteuning -->
+      <div>
+        <h4 class="text-lg font-bold mb-6 text-base-content">Ondersteuning</h4>
+        <ul class="space-y-3 text-base-content/80">
+          <li><a href="/klantenservice" class="hover:text-primary transition">Klantservice</a></li>
+          <li><a href="#" class="hover:text-primary transition">Knowledge base</a></li>
+          <li><a href="#" class="hover:text-primary transition">API documentatie</a></li>
+          <li><a href="#" class="hover:text-primary transition">Controlepaneel</a></li>
+          <li class="mt-4">
+            <a href="#" class="hover:text-primary transition flex items-center gap-2">
+              <span class="text-success">●</span> Onderhoud & Storingen
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Mobiel: focus-based accordions (werkt beter op touch) -->
+    <div class="lg:hidden space-y-4">
+      <!-- Accordion 1: Alle diensten -->
+      <div tabindex="0" class="collapse collapse-arrow bg-base-100 rounded-xl border border-base-300">
+        <div class="collapse-title text-lg font-bold text-base-content">
+          Alle diensten
         </div>
-        <a href="https://www.trustpilot.com/review/gethost.nl" class="text-sm hover:underline">Bekijk alle 12.553 reviews</a>
+        <div class="collapse-content text-base-content/80">
+          <ul class="space-y-3 pt-2">
+            <li><a href="/domeinnamen" class="hover:text-primary transition">Domeinnaam</a></li>
+            <li><a href="#" class="hover:text-primary transition">Website Builder</a></li>
+            <li><a href="/vps" class="hover:text-primary transition">Virtual Private Server</a></li>
+            <li><a href="#" class="hover:text-primary transition">Dedicated Server</a></li>
+            <li><a href="#" class="hover:text-primary transition">Public Cloud</a></li>
+            <li><a href="#" class="hover:text-primary transition">Microsoft 365</a></li>
+            <li><a href="#" class="hover:text-primary transition">SSL-certificaten</a></li>
+          </ul>
+        </div>
       </div>
 
-      <!-- Kolommen -->
-      <div>
-        <h3 class="font-bold mb-4">Domeinnamen</h3>
-        <ul class="space-y-2 text-sm text-gray-300">
-          <li><a href="/domeinnamen" class="hover:text-white">Domeinnaam registreren</a></li>
-          <li><a href="/domeinnamen" class="hover:text-white">Domeinnaam prijzen</a></li>
-          <li><a href="/domein-taxatie" class="hover:text-white">Domeinnaam taxatie</a></li>
-        </ul>
+      <!-- Accordion 2: Domeinnaam & Hosting -->
+      <div tabindex="0" class="collapse collapse-arrow bg-base-100 rounded-xl border border-base-300">
+        <div class="collapse-title text-lg font-bold text-base-content">
+          Domeinnaam & Hosting
+        </div>
+        <div class="collapse-content text-base-content/80">
+          <div class="mb-6">
+            <h5 class="font-semibold mb-2">Domeinnaam</h5>
+            <ul class="space-y-3">
+              <li><a href="/domeinnamen" class="hover:text-primary transition">Domeinnaam registreren</a></li>
+              <li><a href="#" class="hover:text-primary transition">Domeinnaam verhuizen</a></li>
+              <li><a href="#" class="hover:text-primary transition">Tarieven domeinnamen</a></li>
+              <li><a href="#" class="hover:text-primary transition">Nieuwe domeinextensies</a></li>
+            </ul>
+          </div>
+          <div>
+            <h5 class="font-semibold mb-2">Hosting</h5>
+            <ul class="space-y-3">
+              <li><a href="/webhosting" class="hover:text-primary transition">Webhosting</a></li>
+              <li><a href="/webhosting" class="hover:text-primary transition">WordPress hosting</a></li>
+              <li><a href="#" class="hover:text-primary transition">Reseller hosting</a></li>
+            </ul>
+          </div>
+        </div>
       </div>
 
-      <div>
-        <h3 class="font-bold mb-4">Hosting</h3>
-        <ul class="space-y-2 text-sm text-gray-300">
-          <li><a href="/webhosting" class="hover:text-white">Webhosting</a></li>
-          <li><a href="/webhosting-pro" class="hover:text-white">Webhosting Pro</a></li>
-          <li><a href="/wordpress-hosting" class="hover:text-white">WordPress hosting</a></li>
-          <li><a href="/webshop-hosting" class="hover:text-white">Webshop hosting</a></li>
-        </ul>
+      <!-- Accordion 3: Informatie & Juridisch -->
+      <div tabindex="0" class="collapse collapse-arrow bg-base-100 rounded-xl border border-base-300">
+        <div class="collapse-title text-lg font-bold text-base-content">
+          Informatie & Juridisch
+        </div>
+        <div class="collapse-content text-base-content/80">
+          <div class="mb-6">
+            <h5 class="font-semibold mb-2">Informatie</h5>
+            <ul class="space-y-3">
+              <li><a href="/over-ons" class="hover:text-primary transition">Over ons</a></li>
+              <li><a href="/blog" class="hover:text-primary transition">Blog</a></li>
+              <li><a href="#" class="hover:text-primary transition">Duurzaamheid</a></li>
+              <li><a href="#" class="hover:text-primary transition">Affiliate programma</a></li>
+            </ul>
+          </div>
+          <div>
+            <h5 class="font-semibold mb-2">Juridisch</h5>
+            <ul class="space-y-3">
+              <li><a href="/privacybeleid" class="hover:text-primary transition">Privacybeleid</a></li>
+              <li><a href="#" class="hover:text-primary transition">Misbruik melden</a></li>
+              <li><a href="/algemene-voorwaarden" class="hover:text-primary transition">Algemene voorwaarden</a></li>
+            </ul>
+          </div>
+        </div>
       </div>
 
-      <div>
-        <h3 class="font-bold mb-4">Contact</h3>
-        <ul class="space-y-2 text-sm text-gray-300">
-          <li><a href="/kennisbank" class="hover:text-white">Kennisbank</a></li>
-          <li><a href="/blog" class="hover:text-white">Blog</a></li>
-          <li><a href="/over-ons" class="hover:text-white">Over ons</a></li>
-          <li><a href="/werken-bij" class="hover:text-white">Werken bij GetHost</a></li>
-        </ul>
+      <!-- Accordion 4: Ondersteuning -->
+      <div tabindex="0" class="collapse collapse-arrow bg-base-100 rounded-xl border border-base-300">
+        <div class="collapse-title text-lg font-bold text-base-content">
+          Ondersteuning
+        </div>
+        <div class="collapse-content text-base-content/80">
+          <ul class="space-y-3">
+            <li><a href="/klantenservice" class="hover:text-primary transition">Klantservice</a></li>
+            <li><a href="#" class="hover:text-primary transition">Knowledge base</a></li>
+            <li><a href="#" class="hover:text-primary transition">API documentatie</a></li>
+            <li><a href="#" class="hover:text-primary transition">Controlepaneel</a></li>
+            <li class="mt-4">
+              <a href="#" class="hover:text-primary transition flex items-center gap-2">
+                <span class="text-success">●</span> Onderhoud & Storingen
+              </a>
+            </li>
+          </ul>
+        </div>
       </div>
     </div>
-  </div>
 
-  <!-- Subfooter met links -->
-  <div class="bg-black/40 py-8 border-t border-white/10">
-    <div class="max-w-7xl mx-auto px-4 text-center text-sm text-gray-400">
-      <div class="flex flex-wrap justify-center gap-4 mb-4">
-        <a href="/algemene-voorwaarden" class="hover:text-white">Algemene voorwaarden</a>
-        <a href="/privacy" class="hover:text-white">Privacy en cookieverklaring</a>
-        <a href="/fair-use" class="hover:text-white">Fair use beleid</a>
-        <a href="/herroepingsbeleid" class="hover:text-white">Herroepingsbeleid</a>
-        <a href="/responsible-disclosure" class="hover:text-white">Responsible disclosure</a>
-        <a href="/notice-takedown" class="hover:text-white">Notice & Takedown</a>
-        <a href="/data-uitwisseling" class="hover:text-white">Beleid uitwisseling persoonsgegevens</a>
-        <a href="/disclaimer" class="hover:text-white">Disclaimer</a>
+    <!-- Copyright & social -->
+    <div class="mt-12 pt-10 border-t border-base-300 text-center text-sm text-base-content/70">
+      <div class="flex flex-col md:flex-row justify-between items-center gap-6">
+        <div>© {currentYear} GetHost. Alle rechten voorbehouden.</div>
+        <div class="flex gap-6">
+          <a href="#" class="hover:text-primary">Facebook</a>
+          <a href="#" class="hover:text-primary">X / Twitter</a>
+          <a href="#" class="hover:text-primary">LinkedIn</a>
+        </div>
       </div>
-      <p class="text-xs">Prijzen zijn excl. btw tenzij expliciet anders aangegeven © 2025</p>
     </div>
-  </div>
 
-  <!-- Social media (optioneel onderaan) -->
-  <div class="bg-black py-6 text-center">
-    <div class="flex justify-center gap-6">
-      <a href="#" class="text-2xl hover:text-primary"><iconify-icon icon="mdi:facebook"></iconify-icon></a>
-      <a href="#" class="text-2xl hover:text-primary"><iconify-icon icon="mdi:linkedin"></iconify-icon></a>
-      <a href="#" class="text-2xl hover:text-primary"><iconify-icon icon="mdi:instagram"></iconify-icon></a>
-      <a href="#" class="text-2xl hover:text-primary"><iconify-icon icon="mdi:youtube"></iconify-icon></a>
-    </div>
   </div>
 </footer>

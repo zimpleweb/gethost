@@ -4,19 +4,17 @@ export interface Props {
   title: string;
   description?: string;
 }
-
-const { 
-  title = 'GetHost', 
-  description = 'Betrouwbare webhosting en domeinnamen sinds 2004' 
+const {
+  title = 'GetHost',
+  description = 'Betrouwbare webhosting en domeinnamen sinds 2004'
 } = Astro.props;
 
 import '@/styles/global.css';
-
 // CORRECTE IMPORT VOOR COMPONENTEN
 import WhatsAppFloat from './WhatsAppFloat.astro';
 ---
 
-<!DOCTYPE html>
+<!doctype html>
 <html lang="nl">
   <head>
     <meta charset="UTF-8" />
@@ -25,15 +23,18 @@ import WhatsAppFloat from './WhatsAppFloat.astro';
     <title>{title} | GetHost</title>
     <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
 
-    <!-- Fonts -->
+    <!-- Fonts: Inter als primaire sans-serif (meerdere gewichten voor headings/body) -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
 
-    <!-- Iconify -->
+    <!-- Iconify voor iconen -->
     <script is:inline src="https://cdn.jsdelivr.net/npm/iconify-icon@1.0.8/dist/iconify-icon.min.js"></script>
 
-    <!-- Alpine.js -->
+    <!-- Alpine.js (indien nodig voor interacties) -->
     <script type="module">
       import Alpine from 'https://unpkg.com/alpinejs@3.x.x/dist/module.esm.js';
       window.Alpine = Alpine;
@@ -41,15 +42,15 @@ import WhatsAppFloat from './WhatsAppFloat.astro';
     </script>
   </head>
 
-  <body class="font-sans text-dark bg-secondary antialiased">
+  <body class="font-sans antialiased bg-secondary text-dark">
     <slot name="header" />
     <slot />
     <slot name="footer" />
 
-    <!-- WhatsApp floating knop – nu correct geïmporteerd -->
+    <!-- WhatsApp floating knop -->
     <WhatsAppFloat />
 
-    <!-- Scripts -->
+    <!-- Project scripts -->
     <script type="module" hoist src="/src/scripts/main.js"></script>
   </body>
 </html>
@@ -61,5 +62,20 @@ import WhatsAppFloat from './WhatsAppFloat.astro';
     --dark: #0f0f0f;
     --gray: #6b7280;
   }
-  body { font-family: 'Inter', sans-serif; }
+
+  /* Forceer Inter overal als sans-serif */
+  body {
+    font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  }
+
+  /* Optioneel: iets strakkere headings om bij logo te matchen */
+  h1, h2, h3, h4, h5, h6 {
+    font-weight: 700;          /* of 800 voor meer impact */
+    letter-spacing: -0.025em;
+  }
+
+  /* Buttons / calls-to-action iets vetter */
+  .btn-primary {
+    font-weight: 600;
+  }
 </style>

@@ -2,20 +2,22 @@
 import BaseLayout from '../components/layout/BaseLayout.astro';
 import Header from '../components/layout/Header.astro';
 import Footer from '../components/layout/Footer.astro';
-import HomeHero from '../components/HomeHero.astro';     // Houden we voor de echte hero
+import HomeHero from '../components/HomeHero.astro';
 import Reviews from '../components/Reviews.astro';
 import WhyGetHost from '../components/WhyGetHost.astro';
 import SupportCTA from '../components/SupportCTA.astro';
 import FAQAccordion from '../components/FAQAccordion.astro';
 import ServiceFeatures from '../components/ServiceFeatures.astro';
-import Pakketten from '../components/Pakketten.astro';
+import IntroTekst from '../components/IntroTekst.astro';  // ← Hernoemd & gebruikt
 ---
 
 <BaseLayout title="GetHost - Snelle, betrouwbare hosting & domeinnamen">
   <Header />
   <HomeHero />
   <ServiceFeatures />
-  <Pakketten />
+
+  <IntroTekst />
+
   <WhyGetHost />
   <Reviews />
   <SupportCTA />
